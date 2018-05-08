@@ -1,0 +1,1 @@
+<?phpnamespace app\api\validate;// token获取class UIDGet extends BaseValidate{    protected $rule = [        'token' => 'require|isNotEmpty'    ];        protected $message=[        'token' => '请用token换取用户信息！'    ];}

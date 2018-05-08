@@ -1,0 +1,1 @@
+<?php// api 基础性配置return [  'domain' => 'https://www.wjjcypt.cn',  'img_prefix'=>'/images',  'distance' => 5,  'count_1' =>2,  'count_2'=>4,];

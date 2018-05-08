@@ -1,0 +1,1 @@
+<?phpnamespace app\api\validate;// 订单状态class OrderStatus extends BaseValidate{    protected $rule = [        'token' => 'require|isNotEmpty',        'status' =>'require|isNotEmpty'    ];    protected $message=[        'token' => '请用token换取用户信息！',        'status' => '请传入订单状态'    ];}

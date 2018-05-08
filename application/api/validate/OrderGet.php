@@ -1,0 +1,1 @@
+<?phpnamespace app\api\validate;// 订单获取验证class OrderGet extends BaseValidate{    protected $rule = [//        'token' => 'require|isNotEmpty',        'id' =>'require|isNotEmpty'    ];    protected $message=[//        'token' => '请用token换取用户信息！',        'id' => '请传入订单ID'    ];}

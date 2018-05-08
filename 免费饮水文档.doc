@@ -1,0 +1,4900 @@
+
+        <html xmlns:v="urn:schemas-microsoft-com:vml"
+        xmlns:o="urn:schemas-microsoft-com:office:office"
+        xmlns:w="urn:schemas-microsoft-com:office:word"
+        xmlns="http://www.w3.org/TR/REC-html40">
+        <head><meta http-equiv=Content-Type content="text/html;  
+        charset=utf-8">
+        <style type="text/css">
+            table  
+            {  
+                border-collapse: collapse;
+                border: none;  
+                width: 100%;  
+            }  
+            td  
+            {  
+                border: solid #CCC 1px;  
+            }  
+            .codestyle{
+                word-break: break-all;
+                background:silver;mso-highlight:silver;
+            }
+        </style>
+        <meta name=ProgId content=Word.Document>
+        <meta name=Generator content="Microsoft Word 11">
+        <meta name=Originator content="Microsoft Word 11">
+        <xml><w:WordDocument><w:View>Print</w:View></xml></head>
+        <body><h1>1、说明</h1><div style="margin-left:20px;"><p>这是由系统生成的APi文档示例项目</p></div><h1>2、全局错误码</h1><div style="margin-left:20px;"><table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th>错误码</th>
+<th>错误解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1001</td>
+<td>接口认证失败</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>授权过期</td>
+</tr>
+<tr>
+<td>1003</td>
+<td>缺失参数</td>
+</tr>
+</tbody>
+</table></div><h1>3、修改记录</h1><div style="margin-left:20px;"><ul>
+<li>2022年5月</li>
+</ul>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th>日期</th>
+<th>修改人</th>
+<th>涉及接口</th>
+<th>修改内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5月21日</td>
+<td>张三</td>
+<td>用户相关-用户登录</td>
+<td>新增参数校验</td>
+</tr>
+<tr>
+<td>5月21日</td>
+<td>张三</td>
+<td>用户相关-用户登录</td>
+<td>新增参数校验</td>
+</tr>
+<tr>
+<td>5月21日</td>
+<td>张三</td>
+<td>用户相关-用户登录</td>
+<td>新增参数校验</td>
+</tr>
+<tr>
+<td>5月21日</td>
+<td>张三</td>
+<td>用户相关-用户登录</td>
+<td>新增参数校验</td>
+</tr>
+<tr>
+<td>5月21日</td>
+<td>张三</td>
+<td>用户相关-用户登录</td>
+<td>新增参数校验</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>2022年4月</li>
+</ul>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th>日期</th>
+<th>修改人</th>
+<th>涉及接口</th>
+<th>修改内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4月21日</td>
+<td>张三</td>
+<td>用户相关-用户登录</td>
+<td>新增参数校验</td>
+</tr>
+<tr>
+<td>4月21日</td>
+<td>张三</td>
+<td>用户相关-用户登录</td>
+<td>新增参数校验</td>
+</tr>
+<tr>
+<td>4月21日</td>
+<td>张三</td>
+<td>用户相关-用户登录</td>
+<td>新增参数校验</td>
+</tr>
+<tr>
+<td>4月21日</td>
+<td>张三</td>
+<td>用户相关-用户登录</td>
+<td>新增参数校验</td>
+</tr>
+<tr>
+<td>4月21日</td>
+<td>张三</td>
+<td>用户相关-用户登录</td>
+<td>新增参数校验</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+在涉及多页面、多修改情况下，项目管理员可以考虑将项目复制备份。具体操作是，回到项目主页，点击新建项目，勾选“复制已存在项目”。</p></div><h1>4、默认页面</h1><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>商家派单</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/order/shoper/:id</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>订单id</td>
+</tr>
+<tr>
+<td style="text-align: left;">sid</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>骑手id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code> {&quot;
+   code&quot;:200,
+   &quot;msg&quot;:&quot;下单成功&quot;,
+   &quot;data&quot;:   
+      {
+         &quot;id&quot;:650,
+         &quot;order_id&quot;:&quot;1523722304709&quot;,
+         &quot;num&quot;:2,
+         &quot;order_status&quot;:1,
+         &quot;shop_id&quot;:2,
+         &quot;shoper_id&quot;:null,
+         &quot;user_id&quot;:27,
+         &quot;product_id&quot;:9,
+         &quot;updatetime&quot;:1523722304,
+         &quot;o_builddate&quot;:1523722304,
+         &quot;senddate&quot;:null,
+         &quot;o_address&quot;:&quot;广东省广州市花都区胜多负少&quot;,
+         &quot;payway&quot;:null,
+         &quot;prepay_id&quot;:&quot;&quot;,
+         &quot;note&quot;:&quot;rfasdfsd&quot;
+      }
+  }
+
+  {
+    &quot;code&quot;:-200,
+    &quot;msg&quot;:&quot;您是商家，不能下单&quot;
+  }
+</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h1>5、地理相关</h1><div style="margin-left:20px;"><h2>5.1、国内数据</h2><div style="margin-left:20px;"><h3>5.1.1、城市数据</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取某个省份的城市数据</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/geograph/citys</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>GET </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>省份代码</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;error_code&quot;: 0,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;28241&quot;,
+            &quot;code&quot;: &quot;4401&quot;,
+            &quot;parentid&quot;: &quot;44&quot;,
+            &quot;name&quot;: &quot;广州市&quot;,
+            &quot;level&quot;: &quot;2&quot;
+        },
+        {
+            &quot;id&quot;: &quot;28421&quot;,
+            &quot;code&quot;: &quot;4402&quot;,
+            &quot;parentid&quot;: &quot;44&quot;,
+            &quot;name&quot;: &quot;韶关市&quot;,
+            &quot;level&quot;: &quot;2&quot;
+        },
+        {
+            &quot;id&quot;: &quot;28558&quot;,
+            &quot;code&quot;: &quot;4403&quot;,
+            &quot;parentid&quot;: &quot;44&quot;,
+            &quot;name&quot;: &quot;深圳市&quot;,
+            &quot;level&quot;: &quot;2&quot;
+        },
+       ....
+    ]
+}</code></pre></table>
+<p><strong>返回参数说明</strong>
+无</p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>5.1.2、省份数据</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取全国省份数据</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/geograph/province</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>GET </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p>无</p>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;error_code&quot;: 0,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;1&quot;,
+            &quot;code&quot;: &quot;11&quot;,
+            &quot;parentid&quot;: &quot;0&quot;,
+            &quot;name&quot;: &quot;北京市&quot;,
+            &quot;level&quot;: &quot;1&quot;
+        },
+        {
+            &quot;id&quot;: &quot;636&quot;,
+            &quot;code&quot;: &quot;13&quot;,
+            &quot;parentid&quot;: &quot;0&quot;,
+            &quot;name&quot;: &quot;河北省&quot;,
+            &quot;level&quot;: &quot;1&quot;
+        },
+     .....     
+    ]
+}
+</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<p>无</p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div></div><h1>6、送水</h1><div style="margin-left:20px;"><h2>6.1、获取令牌</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>用户注册接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/token/user</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>小程序登录时返回的code</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;token&quot;: &quot;d946edf0b7e4a3a68a33fc55fad01e96&quot;
+}</code></pre></table>
+<p><strong>错误返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code> {
+ &quot;errorCode&quot;:40163,
+ &quot;msg&quot;:&quot;code been used, hints: [ req_id: 9.SPUA0466th24 ]&quot;
+ }</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">groupid</td>
+<td style="text-align: left;">int</td>
+<td>用户组id，1：超级管理员；2：普通用户</td>
+</tr>
+<tr>
+<td style="text-align: left;">groupid</td>
+<td style="text-align: left;">int</td>
+<td>用户组id，1：超级管理员；2：普通用户</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul>
+<p>欢迎使用ShowDoc！</p></div><h2>6.1、送货人</h2><div style="margin-left:20px;"><h3>6.1.1、送货人具体订单</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>送货人具体订单（根据订单ID）</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/order/shoper</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>订单号ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>header头参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>  {
+    &quot;order_id&quot;: &quot;1521618002135&quot;,
+    &quot;num&quot;: 3,
+    &quot;order_status&quot;: 3,
+    &quot;shop_id&quot;: 2,
+    &quot;shoper_id&quot;: 5,
+    &quot;user_id&quot;: 10,
+    &quot;product_id&quot;: 9,
+    &quot;updatetime&quot;: 1521618002,
+    &quot;o_builddate&quot;: 1521618002,
+    &quot;senddate&quot;: null,
+    &quot;o_address&quot;: &quot;广州花都区测试街111号&quot;,
+    &quot;payway&quot;: null,
+    &quot;products&quot;: {
+        &quot;id&quot;: 9,
+        &quot;product_N&quot;: &quot;必宝&quot;,
+        &quot;price&quot;: 12,
+        &quot;product_pic&quot;: [
+            &quot;https://www.dreamus.net/public/upload/product/2018-03-17/1521216080bibao (1).jpg&quot;,
+            &quot;https://www.dreamus.net/public/upload/product/2018-03-17/1521216080bibao (2).jpg&quot;,
+            &quot;https://www.dreamus.net/public/upload/product/2018-03-17/1521216080bibao (3).jpg&quot;
+        ],
+        &quot;product_info&quot;: &quot;必宝水质有保证&quot;,
+        &quot;builddate&quot;: 1521216080,
+        &quot;updatatime&quot;: 1521216080
+    },
+    &quot;users&quot;: {
+        &quot;user_id&quot;: 10,
+        &quot;user_name&quot;: &quot;(｀・ω・´)&quot;,
+        &quot;user_wxid&quot;: &quot;o27rv0Ora7ZGjztTZLoQ0Fb6gM98&quot;,
+        &quot;user_status&quot;: 1,
+        &quot;updatatime&quot;: &quot;2018-03-19 00:47:41&quot;,
+        &quot;registertime&quot;: &quot;2018-03-19 00:47:41&quot;,
+        &quot;u_gender&quot;: 1,
+        &quot;u_isvip&quot;: null
+    },
+    &quot;shopers&quot;: {
+        &quot;sid&quot;: 5,
+        &quot;shop_id&quot;: 1,
+        &quot;name&quot;: &quot;啦啦啦&quot;,
+        &quot;password&quot;: &quot;e10adc3949ba59abbe56&quot;,
+        &quot;realname&quot;: &quot;特步&quot;,
+        &quot;mobile&quot;: &quot;13174514094&quot;,
+        &quot;id_pic&quot;: null
+    }
+}</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">略</td>
+<td style="text-align: left;">略</td>
+<td>略</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>暂无</li>
+</ul></div><h3>6.1.2、送货人查看实时订单</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>送货人查看实时订单</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/order/shoper_now</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>有订单时：
+   {
+        &quot;id&quot;: 793,
+        &quot;order_id&quot;: &quot;1524324783897&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 3,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: 29,
+        &quot;user_id&quot;: 75,
+        &quot;product_id&quot;: 11,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1524324783,
+        &quot;o_builddate&quot;: 1524324783,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;北京市北京市东城区大通公园&quot;,
+        &quot;o_phone&quot;: &quot;18819470586&quot;,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx212333041816417a3214a8c40054209064&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 11,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;怡宝&quot;,
+            &quot;price&quot;: 66,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: {
+            &quot;user_id&quot;: 75,
+            &quot;user_name&quot;: &quot;波波波波波&quot;,
+            &quot;user_phone&quot;: &quot;18819470586&quot;,
+            &quot;user_address&quot;: &quot;北京市北京市东城区&quot;,
+            &quot;user_address_detail&quot;: &quot;大通公园&quot;,
+            &quot;user_floor&quot;: 4,
+            &quot;user_iselevator&quot;: 0,
+            &quot;user_fre&quot;: 1,
+            &quot;business_fre&quot;: 1,
+            &quot;latitude&quot;: &quot;39.938574&quot;,
+            &quot;longitude&quot;: &quot;116.421885&quot;,
+            &quot;updatatime&quot;: &quot;2018-04-21 23:56:24&quot;,
+            &quot;is_business&quot;: 0,
+            &quot;id_pic&quot;: null,
+            &quot;id_pic_back&quot;: null,
+            &quot;license&quot;: null,
+            &quot;store_photo&quot;: null
+        },
+        &quot;shopers&quot;: {
+            &quot;sid&quot;: 29,
+            &quot;user_id&quot;: 75,
+            &quot;shop_id&quot;: 4,
+            &quot;name&quot;: null,
+            &quot;password&quot;: null,
+            &quot;realname&quot;: &quot;啵啵&quot;,
+            &quot;mobile&quot;: &quot;18819470586&quot;,
+            &quot;id_pic&quot;: &quot;/uploads/20180421/e5c7248c2d3cb4e21df22dcf4a4ad6fd.png&quot;,
+            &quot;id_pic_back&quot;: &quot;/uploads/20180421/3e80b3d2cce635d7d34ae8001536c44d.png&quot;,
+            &quot;is_default&quot;: 0
+        },
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    }
+无订单时：
+{
+    &quot;code&quot;: 1001,
+    &quot;msg&quot;: &quot;订单未找到&quot;,
+    &quot;data&quot;: {
+        &quot;reqeust_url&quot;: &quot;/api/v1/order/shoper_now&quot;
+    }
+}
+</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">略</td>
+<td style="text-align: left;">略</td>
+<td>略</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul>
+<p>欢迎使用ShowDoc！</p></div><h3>6.1.3、送货人查看过去订单</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>送货人查看过去订单</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/order/shoper_past</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>有订单时：
+   {
+        &quot;id&quot;: 793,
+        &quot;order_id&quot;: &quot;1524324783897&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 4,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: 29,
+        &quot;user_id&quot;: 75,
+        &quot;product_id&quot;: 11,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1524324783,
+        &quot;o_builddate&quot;: 1524324783,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;北京市北京市东城区大通公园&quot;,
+        &quot;o_phone&quot;: &quot;18819470586&quot;,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx212333041816417a3214a8c40054209064&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 11,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;怡宝&quot;,
+            &quot;price&quot;: 66,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: {
+            &quot;user_id&quot;: 75,
+            &quot;user_name&quot;: &quot;波波波波波&quot;,
+            &quot;user_phone&quot;: &quot;18819470586&quot;,
+            &quot;user_address&quot;: &quot;北京市北京市东城区&quot;,
+            &quot;user_address_detail&quot;: &quot;大通公园&quot;,
+            &quot;user_floor&quot;: 4,
+            &quot;user_iselevator&quot;: 0,
+            &quot;user_fre&quot;: 1,
+            &quot;business_fre&quot;: 1,
+            &quot;latitude&quot;: &quot;39.938574&quot;,
+            &quot;longitude&quot;: &quot;116.421885&quot;,
+            &quot;updatatime&quot;: &quot;2018-04-21 23:35:03&quot;,
+            &quot;is_business&quot;: 0,
+            &quot;id_pic&quot;: null,
+            &quot;id_pic_back&quot;: null,
+            &quot;license&quot;: null,
+            &quot;store_photo&quot;: null
+        },
+        &quot;shopers&quot;: {
+            &quot;sid&quot;: 29,
+            &quot;user_id&quot;: 75,
+            &quot;shop_id&quot;: 4,
+            &quot;name&quot;: null,
+            &quot;password&quot;: null,
+            &quot;realname&quot;: &quot;啵啵&quot;,
+            &quot;mobile&quot;: &quot;18819470586&quot;,
+            &quot;id_pic&quot;: &quot;/uploads/20180421/e5c7248c2d3cb4e21df22dcf4a4ad6fd.png&quot;,
+            &quot;id_pic_back&quot;: &quot;/uploads/20180421/3e80b3d2cce635d7d34ae8001536c44d.png&quot;,
+            &quot;is_default&quot;: 0
+        },
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    },
+    {
+        &quot;id&quot;: 781,
+        &quot;order_id&quot;: &quot;1524240654249&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 5,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: 29,
+        &quot;user_id&quot;: 75,
+        &quot;product_id&quot;: 11,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1524240803,
+        &quot;o_builddate&quot;: 1524240654,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;北京市北京市东城区哈哈哈&quot;,
+        &quot;o_phone&quot;: &quot;17075259500&quot;,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx21001054619537379d2aab510910014498&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 11,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;怡宝&quot;,
+            &quot;price&quot;: 66,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: {
+            &quot;user_id&quot;: 75,
+            &quot;user_name&quot;: &quot;波波波波波&quot;,
+            &quot;user_phone&quot;: &quot;18819470586&quot;,
+            &quot;user_address&quot;: &quot;北京市北京市东城区&quot;,
+            &quot;user_address_detail&quot;: &quot;大通公园&quot;,
+            &quot;user_floor&quot;: 4,
+            &quot;user_iselevator&quot;: 0,
+            &quot;user_fre&quot;: 1,
+            &quot;business_fre&quot;: 1,
+            &quot;latitude&quot;: &quot;39.938574&quot;,
+            &quot;longitude&quot;: &quot;116.421885&quot;,
+            &quot;updatatime&quot;: &quot;2018-04-21 23:35:03&quot;,
+            &quot;is_business&quot;: 0,
+            &quot;id_pic&quot;: null,
+            &quot;id_pic_back&quot;: null,
+            &quot;license&quot;: null,
+            &quot;store_photo&quot;: null
+        },
+        &quot;shopers&quot;: {
+            &quot;sid&quot;: 29,
+            &quot;user_id&quot;: 75,
+            &quot;shop_id&quot;: 4,
+            &quot;name&quot;: null,
+            &quot;password&quot;: null,
+            &quot;realname&quot;: &quot;啵啵&quot;,
+            &quot;mobile&quot;: &quot;18819470586&quot;,
+            &quot;id_pic&quot;: &quot;/uploads/20180421/e5c7248c2d3cb4e21df22dcf4a4ad6fd.png&quot;,
+            &quot;id_pic_back&quot;: &quot;/uploads/20180421/3e80b3d2cce635d7d34ae8001536c44d.png&quot;,
+            &quot;is_default&quot;: 0
+        },
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    }
+无订单时：
+{
+    &quot;code&quot;: 1001,
+    &quot;msg&quot;: &quot;订单未找到&quot;,
+    &quot;data&quot;: {
+        &quot;reqeust_url&quot;: &quot;/api/v1/order/shoper_past&quot;
+    }
+}
+</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">略</td>
+<td style="text-align: left;">略</td>
+<td>略</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul>
+<p>欢迎使用ShowDoc！</p></div></div><h2>6.2、个人企业</h2><div style="margin-left:20px;"><h3>6.2.1、个人企业订单下各个订单所属状态的数量</h3><div style="margin-left:30px;"><p>欢迎使用ShowDoc！</p>
+<p><strong>简要描述：</strong> </p>
+<ul>
+<li>个人企业订单下各个订单所属状态的数量</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/order/businessWait</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;获取成功&quot;,
+    &quot;data&quot;: {
+        &quot;count_1&quot;: 1,
+        &quot;count_2&quot;: 0,
+        &quot;count_3&quot;: 0
+    }
+}</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.2.2、根据状态获取企业用户订单</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>根据状态获取企业用户订单</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/user/businessOrderStatus</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">status</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>订单状态</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>有订单：
+[
+      {
+        &quot;id&quot;: 793,
+        &quot;order_id&quot;: &quot;1524324783897&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 3,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: 29,
+        &quot;user_id&quot;: 75,
+        &quot;product_id&quot;: 11,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 1,
+        &quot;updatetime&quot;: 1524324783,
+        &quot;o_builddate&quot;: 1524324783,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;北京市北京市东城区大通公园&quot;,
+        &quot;o_phone&quot;: &quot;18819470586&quot;,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx212333041816417a3214a8c40054209064&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 11,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;怡宝&quot;,
+            &quot;price&quot;: 66,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: {
+            &quot;user_id&quot;: 75,
+            &quot;user_name&quot;: &quot;波波波波波&quot;,
+            &quot;user_phone&quot;: &quot;18819470586&quot;,
+            &quot;user_address&quot;: &quot;北京市北京市东城区&quot;,
+            &quot;user_address_detail&quot;: &quot;大通公园&quot;,
+            &quot;user_floor&quot;: 4,
+            &quot;user_iselevator&quot;: 0,
+            &quot;user_fre&quot;: 1,
+            &quot;business_fre&quot;: 1,
+            &quot;latitude&quot;: &quot;39.938574&quot;,
+            &quot;longitude&quot;: &quot;116.421885&quot;,
+            &quot;updatatime&quot;: &quot;2018-04-22 13:02:52&quot;,
+            &quot;is_business&quot;: 1,
+            &quot;id_pic&quot;: null,
+            &quot;id_pic_back&quot;: null,
+            &quot;license&quot;: null,
+            &quot;store_photo&quot;: null
+        },
+        &quot;shopers&quot;: {
+            &quot;sid&quot;: 29,
+            &quot;user_id&quot;: 75,
+            &quot;shop_id&quot;: 4,
+            &quot;name&quot;: null,
+            &quot;password&quot;: null,
+            &quot;realname&quot;: &quot;啵啵&quot;,
+            &quot;mobile&quot;: &quot;18819470586&quot;,
+            &quot;id_pic&quot;: &quot;/uploads/20180421/e5c7248c2d3cb4e21df22dcf4a4ad6fd.png&quot;,
+            &quot;id_pic_back&quot;: &quot;/uploads/20180421/3e80b3d2cce635d7d34ae8001536c44d.png&quot;,
+            &quot;is_default&quot;: 0
+        },
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    }
+]
+没订单：
+{
+    &quot;code&quot;: 1001,
+    &quot;msg&quot;: &quot;订单未找到&quot;,
+    &quot;data&quot;: {
+        &quot;reqeust_url&quot;: &quot;/api/v1/user/businessOrderStatus&quot;
+    }
+}</code></pre></table></div><h3>6.2.3、获取企业订单</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取企业订单</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/user/businessOrders</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>有订单：
+[
+    {
+        &quot;id&quot;: 793,
+        &quot;order_id&quot;: &quot;1524324783897&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 3,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: 29,
+        &quot;user_id&quot;: 75,
+        &quot;product_id&quot;: 11,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 1,
+        &quot;updatetime&quot;: 1524324783,
+        &quot;o_builddate&quot;: 1524324783,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;北京市北京市东城区大通公园&quot;,
+        &quot;o_phone&quot;: &quot;18819470586&quot;,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx212333041816417a3214a8c40054209064&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 11,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;怡宝&quot;,
+            &quot;price&quot;: 66,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: {
+            &quot;user_id&quot;: 75,
+            &quot;user_name&quot;: &quot;波波波波波&quot;,
+            &quot;user_phone&quot;: &quot;18819470586&quot;,
+            &quot;user_address&quot;: &quot;北京市北京市东城区&quot;,
+            &quot;user_address_detail&quot;: &quot;大通公园&quot;,
+            &quot;user_floor&quot;: 4,
+            &quot;user_iselevator&quot;: 0,
+            &quot;user_fre&quot;: 1,
+            &quot;business_fre&quot;: 1,
+            &quot;latitude&quot;: &quot;39.938574&quot;,
+            &quot;longitude&quot;: &quot;116.421885&quot;,
+            &quot;updatatime&quot;: &quot;2018-04-22 01:04:11&quot;,
+            &quot;is_business&quot;: 1,
+            &quot;id_pic&quot;: null,
+            &quot;id_pic_back&quot;: null,
+            &quot;license&quot;: null,
+            &quot;store_photo&quot;: null
+        },
+        &quot;shopers&quot;: {
+            &quot;sid&quot;: 29,
+            &quot;user_id&quot;: 75,
+            &quot;shop_id&quot;: 4,
+            &quot;name&quot;: null,
+            &quot;password&quot;: null,
+            &quot;realname&quot;: &quot;啵啵&quot;,
+            &quot;mobile&quot;: &quot;18819470586&quot;,
+            &quot;id_pic&quot;: &quot;/uploads/20180421/e5c7248c2d3cb4e21df22dcf4a4ad6fd.png&quot;,
+            &quot;id_pic_back&quot;: &quot;/uploads/20180421/3e80b3d2cce635d7d34ae8001536c44d.png&quot;,
+            &quot;is_default&quot;: 0
+        },
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    }
+]
+没订单：
+{
+    &quot;code&quot;: 1001,
+    &quot;msg&quot;: &quot;订单未找到&quot;,
+    &quot;data&quot;: {
+        &quot;reqeust_url&quot;: &quot;/api/v1/user/businessOrders&quot;
+    }
+}</code></pre></table></div></div><h2>6.3、服务点</h2><div style="margin-left:20px;"><h3>6.3.1、商家的历史订单</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>商家的历史订单</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/order/shopPastOrders</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>[
+    {
+        &quot;id&quot;: 812,
+        &quot;order_id&quot;: &quot;1524334383426&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 5,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: 31,
+        &quot;user_id&quot;: 81,
+        &quot;product_id&quot;: 10,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1524334497,
+        &quot;o_builddate&quot;: 1524334383,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;广东省广州市花都区花都广场&quot;,
+        &quot;o_phone&quot;: &quot;18814376329&quot;,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx22021303981179723e7319623581906641&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 10,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;必宝5&quot;,
+            &quot;price&quot;: 12,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;必宝水质有保证&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: {
+            &quot;user_id&quot;: 81,
+            &quot;user_name&quot;: &quot;杨建1&quot;,
+            &quot;user_phone&quot;: &quot;18814376329&quot;,
+            &quot;user_address&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;user_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;user_floor&quot;: 11,
+            &quot;user_iselevator&quot;: 1,
+            &quot;user_fre&quot;: 1,
+            &quot;business_fre&quot;: 1,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatatime&quot;: &quot;2018-04-22 13:45:50&quot;,
+            &quot;is_business&quot;: 1
+        },
+        &quot;shopers&quot;: {
+            &quot;sid&quot;: 31,
+            &quot;user_id&quot;: 81,
+            &quot;shop_id&quot;: 4,
+            &quot;name&quot;: null,
+            &quot;password&quot;: null,
+            &quot;realname&quot;: &quot;杨吊吊&quot;,
+            &quot;mobile&quot;: &quot;18814376329&quot;,
+            &quot;id_pic&quot;: &quot;/uploads/20180422/ee30eec10db3f0a8f6ed68b13ca7eed3.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/uploads/20180422/aa2f6f60ec665f85258b5f24913dfa4b.jpg&quot;,
+            &quot;is_default&quot;: 0
+        },
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    },
+    {
+        &quot;id&quot;: 809,
+        &quot;order_id&quot;: &quot;1524334123111&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 5,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: 31,
+        &quot;user_id&quot;: 81,
+        &quot;product_id&quot;: 11,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1524334230,
+        &quot;o_builddate&quot;: 1524334123,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;广东省广州市花都区花都广场&quot;,
+        &quot;o_phone&quot;: &quot;18814376329&quot;,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx2202084402548729a94bc1da0684696028&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 11,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;怡宝&quot;,
+            &quot;price&quot;: 66,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        }
+    }
+]</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.3.2、附近商铺的所有商品</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>附近商铺的所有商品</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/shop/nearProducts</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">shop_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>商铺id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;获取成功&quot;,
+    &quot;data&quot;: {
+        &quot;products&quot;: [
+            {
+                &quot;id&quot;: 11,
+                &quot;shop_id&quot;: 4,
+                &quot;product_N&quot;: &quot;怡宝&quot;,
+                &quot;price&quot;: 66,
+                &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+                &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+                &quot;builddate&quot;: 1521216080,
+                &quot;updatatime&quot;: 1521216080
+            },
+            {
+                &quot;id&quot;: 10,
+                &quot;shop_id&quot;: 4,
+                &quot;product_N&quot;: &quot;必宝5&quot;,
+                &quot;price&quot;: 12,
+                &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+                &quot;product_info&quot;: &quot;必宝水质有保证&quot;,
+                &quot;builddate&quot;: 1521216080,
+                &quot;updatatime&quot;: 1521216080
+            }
+        ]
+    }
+}
+失败:
+{
+    &quot;code&quot;: 201,
+    &quot;msg&quot;: &quot;暂无商品信息&quot;,
+    &quot;data&quot;: []
+}</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.3.3、加盟商家/支付</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>加盟商家/支付</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/shop/payShopOrder</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;appId&quot;: &quot;wx9f326c11be6fc222&quot;,
+    &quot;timeStamp&quot;: &quot;1524377158&quot;,
+    &quot;nonceStr&quot;: &quot;ubq4e2ka969iypj56fotxjy8r5f5m933&quot;,
+    &quot;package&quot;: &quot;prepay_id=wx2214055864582882b897ab440927633022&quot;,
+    &quot;signType&quot;: &quot;MD5&quot;,
+    &quot;paySign&quot;: &quot;B3F3900AED70648BA6D2A5BF18051222&quot;
+}
+失败:
+{
+    &quot;code&quot;: 1001,
+    &quot;msg&quot;: &quot;您已交过押金！&quot;,
+    &quot;data&quot;: {
+        &quot;reqeust_url&quot;: &quot;/api/v1/shop/payShopOrder&quot;
+    }
+}</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.3.4、商家未发货的实时订单</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>商家未发货的实时订单</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/order/shopPresentOrders</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>[
+    {
+        &quot;id&quot;: 810,
+        &quot;order_id&quot;: &quot;1524334356773&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 2,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: null,
+        &quot;user_id&quot;: 81,
+        &quot;product_id&quot;: 11,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1524334356,
+        &quot;o_builddate&quot;: 1524334356,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;广东省广州市花都区花都广场&quot;,
+        &quot;o_phone&quot;: &quot;18814376329&quot;,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx22021236837286e60d1760b50703018470&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 11,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;怡宝&quot;,
+            &quot;price&quot;: 66,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: {
+            &quot;user_id&quot;: 81,
+            &quot;user_name&quot;: &quot;杨建1&quot;,
+            &quot;user_phone&quot;: &quot;18814376329&quot;,
+            &quot;user_address&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;user_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;user_floor&quot;: 11,
+            &quot;user_iselevator&quot;: 1,
+            &quot;user_fre&quot;: 1,
+            &quot;business_fre&quot;: 1,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatatime&quot;: &quot;2018-04-22 13:45:50&quot;,
+            &quot;is_business&quot;: 1
+        },
+        &quot;shopers&quot;: null,
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    },
+    {
+        &quot;id&quot;: 753,
+        &quot;order_id&quot;: &quot;1524148942560&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 2,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: null,
+        &quot;user_id&quot;: 41,
+        &quot;product_id&quot;: 11,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1524148942,
+        &quot;o_builddate&quot;: 1524148942,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;广东省广州市花都区茶园市场&quot;,
+        &quot;o_phone&quot;: &quot;17075259500&quot;,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx19224222419266826084f7244272761716&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 11,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;怡宝&quot;,
+            &quot;price&quot;: 66,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: null,
+        &quot;shopers&quot;: null,
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    },
+    {
+        &quot;id&quot;: 748,
+        &quot;order_id&quot;: &quot;1524122468362&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 2,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: null,
+        &quot;user_id&quot;: 50,
+        &quot;product_id&quot;: 10,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1524122468,
+        &quot;o_builddate&quot;: 1524122468,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;广东省广州市花都区新华街道公益路&quot;,
+        &quot;o_phone&quot;: &quot;18819470669&quot;,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx191521086774084bd39356543532246955&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 10,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;必宝5&quot;,
+            &quot;price&quot;: 12,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;必宝水质有保证&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: null,
+        &quot;shopers&quot;: null,
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    },
+    {
+        &quot;id&quot;: 741,
+        &quot;order_id&quot;: &quot;1524071446460&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 2,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: null,
+        &quot;user_id&quot;: 62,
+        &quot;product_id&quot;: 11,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1524071446,
+        &quot;o_builddate&quot;: 1524071446,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;北京市北京市东城区&quot;,
+        &quot;o_phone&quot;: null,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx19013017602143ecc6e047fc2541764789&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 11,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;怡宝&quot;,
+            &quot;price&quot;: 66,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: null,
+        &quot;shopers&quot;: null,
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    },
+    {
+        &quot;id&quot;: 740,
+        &quot;order_id&quot;: &quot;1524067023844&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 2,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: null,
+        &quot;user_id&quot;: 65,
+        &quot;product_id&quot;: 11,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1524067023,
+        &quot;o_builddate&quot;: 1524067023,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;北京市北京市东城区&quot;,
+        &quot;o_phone&quot;: null,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx182357033015126a6ee7d45e0287042718&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 11,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;怡宝&quot;,
+            &quot;price&quot;: 66,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: null,
+        &quot;shopers&quot;: null,
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    },
+    {
+        &quot;id&quot;: 738,
+        &quot;order_id&quot;: &quot;1524061417026&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 2,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: 22,
+        &quot;user_id&quot;: 62,
+        &quot;product_id&quot;: 11,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1524061417,
+        &quot;o_builddate&quot;: 1524061417,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;北京市北京市东城区&quot;,
+        &quot;o_phone&quot;: null,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx19013342850703fc12b8f48f0533016743&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 11,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;怡宝&quot;,
+            &quot;price&quot;: 66,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: null,
+        &quot;shopers&quot;: null,
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    },
+    {
+        &quot;id&quot;: 732,
+        &quot;order_id&quot;: &quot;1524016904240&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 2,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: null,
+        &quot;user_id&quot;: 50,
+        &quot;product_id&quot;: 10,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1524016904,
+        &quot;o_builddate&quot;: 1524016904,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;广东省广州市花都区&quot;,
+        &quot;o_phone&quot;: null,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx18100145495273eb8f5a94f81355059808&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 10,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;必宝5&quot;,
+            &quot;price&quot;: 12,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;必宝水质有保证&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: null,
+        &quot;shopers&quot;: null,
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    },
+    {
+        &quot;id&quot;: 730,
+        &quot;order_id&quot;: &quot;1524014483450&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 2,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: 41,
+        &quot;user_id&quot;: 46,
+        &quot;product_id&quot;: 11,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1524014483,
+        &quot;o_builddate&quot;: 1524014483,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;广东省广州市花都区&quot;,
+        &quot;o_phone&quot;: null,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 11,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;怡宝&quot;,
+            &quot;price&quot;: 66,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: null,
+        &quot;shopers&quot;: null,
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    },
+    {
+        &quot;id&quot;: 692,
+        &quot;order_id&quot;: &quot;1523971669453&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 2,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: null,
+        &quot;user_id&quot;: 41,
+        &quot;product_id&quot;: 11,
+        &quot;service_fee&quot;: &quot;0.00&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1523971669,
+        &quot;o_builddate&quot;: 1523971669,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;广东省广州市花都区&quot;,
+        &quot;o_phone&quot;: null,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx1721274920835767288991fe1562418664&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 11,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;怡宝&quot;,
+            &quot;price&quot;: 66,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: null,
+        &quot;shopers&quot;: null,
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    }
+]</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.3.5、附近商家</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>附近商家</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/shop/nearShops</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">lat</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>经度</td>
+</tr>
+<tr>
+<td style="text-align: left;">lng</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>纬度</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>成功：
+{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;获取成功&quot;,
+    &quot;data&quot;: {
+        &quot;res&quot;: [
+            {
+                &quot;shop_id&quot;: 1,
+                &quot;user_id&quot;: 50,
+                &quot;shop_name&quot;: &quot;花都区政府&quot;,
+                &quot;shop_phone&quot;: &quot;18819470999&quot;,
+                &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+                &quot;shop_address_detail&quot;: &quot;花都区政府&quot;,
+                &quot;latitude&quot;: &quot;23.409635&quot;,
+                &quot;longitude&quot;: &quot;113.226830&quot;,
+                &quot;updatetime&quot;: 1524189317,
+                &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+                &quot;id_pic_back&quot;: &quot;/uploads/20180419/2c3f69c64b50e42d1562ab00da3c0805.png&quot;,
+                &quot;id_pic&quot;: &quot;/uploads/20180419/1ef8e7d1afc6047f0b9eb93e4fedb80f.png&quot;,
+                &quot;lience_pic&quot;: &quot;/uploads/20180419/db91ac49d258294da6c3d2ed66b12a32.jpg&quot;,
+                &quot;email&quot;: null,
+                &quot;registertime&quot;: 1524124530,
+                &quot;is_check&quot;: 1,
+                &quot;is_pay&quot;: 1,
+                &quot;service_fee&quot;: &quot;0.02&quot;,
+                &quot;star&quot;: 5,
+                &quot;distance&quot;: 0
+            },
+            {
+                &quot;shop_id&quot;: 4,
+                &quot;user_id&quot;: 75,
+                &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+                &quot;shop_phone&quot;: &quot;14353456457&quot;,
+                &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+                &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+                &quot;latitude&quot;: &quot;23.400480&quot;,
+                &quot;longitude&quot;: &quot;113.220190&quot;,
+                &quot;updatetime&quot;: 1523498148,
+                &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+                &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+                &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+                &quot;lience_pic&quot;: &quot;/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+                &quot;email&quot;: null,
+                &quot;registertime&quot;: 1523355552,
+                &quot;is_check&quot;: 1,
+                &quot;is_pay&quot;: 1,
+                &quot;service_fee&quot;: &quot;0.01&quot;,
+                &quot;star&quot;: 3,
+                &quot;distance&quot;: 1.1921
+            },
+            {
+                &quot;shop_id&quot;: 23,
+                &quot;user_id&quot;: 71,
+                &quot;shop_name&quot;: &quot;波波波波波&quot;,
+                &quot;shop_phone&quot;: &quot;18888888888&quot;,
+                &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+                &quot;shop_address_detail&quot;: &quot;景兴大酒店&quot;,
+                &quot;latitude&quot;: &quot;23.398098&quot;,
+                &quot;longitude&quot;: &quot;113.210050&quot;,
+                &quot;updatetime&quot;: 1524190181,
+                &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+                &quot;id_pic_back&quot;: &quot;/uploads/20180420/27c40500fb05579985d8d01c03e7c5f2.jpg&quot;,
+                &quot;id_pic&quot;: &quot;/uploads/20180420/7964ab2af1e1e57befa86dff6e670c2e.jpg&quot;,
+                &quot;lience_pic&quot;: &quot;/uploads/20180420/75cd92df7805f7bfb73189c4acbf30fe.jpg&quot;,
+                &quot;email&quot;: null,
+                &quot;registertime&quot;: 1524190143,
+                &quot;is_check&quot;: 1,
+                &quot;is_pay&quot;: 1,
+                &quot;service_fee&quot;: &quot;0.01&quot;,
+                &quot;star&quot;: 5,
+                &quot;distance&quot;: 2.2087
+            }
+        ]
+    }
+}
+失败:
+{
+    &quot;code&quot;: 201,
+    &quot;msg&quot;: &quot;附近没有商家，期待你的加入&quot;,
+    &quot;data&quot;: []
+}</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.3.6、我的商铺</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我的商铺</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/shop/getMyShop</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;商家信息获取成功&quot;,
+    &quot;data&quot;: {
+        &quot;shop&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    }
+}</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.3.7、全部审核商铺</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>全部审核商铺</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/shop/getAllShop</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;获取成功&quot;,
+    &quot;data&quot;: {
+        &quot;shops&quot;: [
+            {
+                &quot;shop_id&quot;: 23,
+                &quot;user_id&quot;: 71,
+                &quot;shop_name&quot;: &quot;波波波波波&quot;,
+                &quot;shop_phone&quot;: &quot;18888888888&quot;,
+                &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+                &quot;shop_address_detail&quot;: &quot;景兴大酒店&quot;,
+                &quot;latitude&quot;: &quot;23.398098&quot;,
+                &quot;longitude&quot;: &quot;113.210050&quot;,
+                &quot;updatetime&quot;: 1524190181,
+                &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+                &quot;id_pic_back&quot;: &quot;/uploads/20180420/27c40500fb05579985d8d01c03e7c5f2.jpg&quot;,
+                &quot;id_pic&quot;: &quot;/uploads/20180420/7964ab2af1e1e57befa86dff6e670c2e.jpg&quot;,
+                &quot;lience_pic&quot;: &quot;/uploads/20180420/75cd92df7805f7bfb73189c4acbf30fe.jpg&quot;,
+                &quot;email&quot;: null,
+                &quot;registertime&quot;: 1524190143,
+                &quot;is_check&quot;: 1,
+                &quot;is_pay&quot;: 1,
+                &quot;service_fee&quot;: &quot;0.01&quot;,
+                &quot;star&quot;: 5,
+                &quot;distance&quot;: 12857.9922
+            }
+        ],
+        &quot;products&quot;: [
+            {
+                &quot;id&quot;: 14,
+                &quot;shop_id&quot;: 23,
+                &quot;product_N&quot;: &quot;巅峰山泉&quot;,
+                &quot;price&quot;: 34,
+                &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+                &quot;product_info&quot;: &quot;怡宝矿泉水ss&quot;,
+                &quot;builddate&quot;: 1521216080,
+                &quot;updatatime&quot;: 1521216080
+            }
+        ]
+    }
+}</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.3.8、商家订单</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>商家订单</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/order/shopOrders</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>[
+    {
+        &quot;id&quot;: 812,
+        &quot;order_id&quot;: &quot;1524334383426&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 5,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: 31,
+        &quot;user_id&quot;: 81,
+        &quot;product_id&quot;: 10,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1524334497,
+        &quot;o_builddate&quot;: 1524334383,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;广东省广州市花都区花都广场&quot;,
+        &quot;o_phone&quot;: &quot;18814376329&quot;,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx22021303981179723e7319623581906641&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 10,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;必宝5&quot;,
+            &quot;price&quot;: 12,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;必宝水质有保证&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: {
+            &quot;user_id&quot;: 81,
+            &quot;user_name&quot;: &quot;杨建1&quot;,
+            &quot;user_phone&quot;: &quot;18814376329&quot;,
+            &quot;user_address&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;user_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;user_floor&quot;: 11,
+            &quot;user_iselevator&quot;: 1,
+            &quot;user_fre&quot;: 1,
+            &quot;business_fre&quot;: 1,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatatime&quot;: &quot;2018-04-22 13:45:50&quot;,
+            &quot;is_business&quot;: 1
+        },
+        &quot;shopers&quot;: {
+            &quot;sid&quot;: 31,
+            &quot;user_id&quot;: 81,
+            &quot;shop_id&quot;: 4,
+            &quot;name&quot;: null,
+            &quot;password&quot;: null,
+            &quot;realname&quot;: &quot;杨吊吊&quot;,
+            &quot;mobile&quot;: &quot;18814376329&quot;,
+            &quot;id_pic&quot;: &quot;/uploads/20180422/ee30eec10db3f0a8f6ed68b13ca7eed3.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/uploads/20180422/aa2f6f60ec665f85258b5f24913dfa4b.jpg&quot;,
+            &quot;is_default&quot;: 0
+        }
+    }
+]</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.3.9、获取我商铺的评论</h3><div style="margin-left:30px;"><p>欢迎使用ShowDoc！</p>
+<p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取我商铺的评论</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/comment/GetMyShopComment</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;ok&quot;,
+    &quot;data&quot;: {
+        &quot;comment&quot;: [
+            {
+                &quot;id&quot;: 17,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1523982679884&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 53,
+                &quot;true_name&quot;: &quot;☞&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/O1Gx6YFajwl16kRPDtMwswGhyowKAp4iaqCibv4c2ibrdLrVHBhKo03qCdgGf8k4zDZGYibdMACAb5SysUYdHt0gUQ/0&quot;,
+                &quot;eavl&quot;: &quot;非常好&quot;,
+                &quot;time&quot;: &quot;2018-04-18 11:02:12&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 18,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524074257794&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 50,
+                &quot;true_name&quot;: &quot;烟淡黄昏&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ep4Ts4icQNq4UoIWbHPpXJUVyEvITWe0XJVDLBGm2d9Hf7JCmGSsoY4VlVMVsbBiaanUo3jMmdnxNuQ/0&quot;,
+                &quot;eavl&quot;: &quot;还行&quot;,
+                &quot;time&quot;: &quot;2018-04-19 09:40:34&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 19,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524074015276&quot;,
+                &quot;goods_name&quot;: &quot;water&quot;,
+                &quot;user_id&quot;: 62,
+                &quot;true_name&quot;: &quot;wuzhibo&quot;,
+                &quot;user_img&quot;: &quot;asdasdsad&quot;,
+                &quot;eavl&quot;: &quot;GG&quot;,
+                &quot;time&quot;: &quot;2018-04-19 12:02:14&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 20,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524193336965&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 71,
+                &quot;true_name&quot;: &quot;NoName&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/yByWWFaiaDZ5NJJPqVfMC9PsxP3ha3Of4OczjNH2LicmqftmoNK4mnEQpiaxujRPCdEdqkZcB5VMcHgQUfhDeYT5Q/0&quot;,
+                &quot;eavl&quot;: &quot;噼噼啪啪&quot;,
+                &quot;time&quot;: &quot;2018-04-20 11:12:49&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 21,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524210709688&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 47,
+                &quot;true_name&quot;: &quot;浪子小卢&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/8CDhvLgPPNwiad60nAZYgrG6OKlJkA6SOK9AyMp8PrzvKG7fPS519wzS4OKkYQqJsWljoIHgQCH7bHhc4s6MU2w/0&quot;,
+                &quot;eavl&quot;: &quot;aaa &quot;,
+                &quot;time&quot;: &quot;2018-04-20 21:07:55&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 22,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524240654249&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 74,
+                &quot;true_name&quot;: &quot;☞&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/O1Gx6YFajwl16kRPDtMwswGhyowKAp4iaqCibv4c2ibrdLrVHBhKo03qCdgGf8k4zDZGYibdMACAb5SysUYdHt0gUQ/0&quot;,
+                &quot;eavl&quot;: &quot;哈哈&quot;,
+                &quot;time&quot;: &quot;2018-04-21 00:13:23&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 16,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1523895986877&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 50,
+                &quot;true_name&quot;: &quot;烟淡黄昏&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ep4Ts4icQNq4UoIWbHPpXJUVyEvITWe0XJVDLBGm2d9Hf7JCmGSsoY4VlVMVsbBiaanUo3jMmdnxNuQ/0&quot;,
+                &quot;eavl&quot;: &quot;enen&quot;,
+                &quot;time&quot;: &quot;2018-04-18 10:25:17&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 23,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 13:45:32&quot;,
+                &quot;star&quot;: 5
+            },
+            {
+                &quot;id&quot;: 24,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:05:07&quot;,
+                &quot;star&quot;: 5
+            },
+            {
+                &quot;id&quot;: 25,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:06:09&quot;,
+                &quot;star&quot;: 5
+            },
+            {
+                &quot;id&quot;: 26,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:06:28&quot;,
+                &quot;star&quot;: 5
+            },
+            {
+                &quot;id&quot;: 27,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:06:50&quot;,
+                &quot;star&quot;: 5
+            },
+            {
+                &quot;id&quot;: 28,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:09:39&quot;,
+                &quot;star&quot;: 5
+            },
+            {
+                &quot;id&quot;: 45,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:27:54&quot;,
+                &quot;star&quot;: 2
+            },
+            {
+                &quot;id&quot;: 44,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:23:23&quot;,
+                &quot;star&quot;: 2
+            },
+            {
+                &quot;id&quot;: 43,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:15:57&quot;,
+                &quot;star&quot;: 2
+            },
+            {
+                &quot;id&quot;: 41,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:15:25&quot;,
+                &quot;star&quot;: 2
+            },
+            {
+                &quot;id&quot;: 42,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:15:26&quot;,
+                &quot;star&quot;: 2
+            },
+            {
+                &quot;id&quot;: 55,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524328432109&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 81,
+                &quot;true_name&quot;: &quot;☞&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/O1Gx6YFajwl16kRPDtMwswGhyowKAp4iaqCibv4c2ibrdLrVHBhKo03qCdgGf8k4zDZGYibdMACAb5SysUYdHt0gUQ/0&quot;,
+                &quot;eavl&quot;: &quot;好好好&quot;,
+                &quot;time&quot;: &quot;2018-04-22 00:49:30&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 58,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524326796831&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;烟淡黄昏&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ep4Ts4icQNq4UoIWbHPpXJUVyEvITWe0XJVDLBGm2d9Hf7JCmGSsoY4VlVMVsbBiaanUo3jMmdnxNuQ/0&quot;,
+                &quot;eavl&quot;: &quot;我是个好人&quot;,
+                &quot;time&quot;: &quot;2018-04-22 01:43:06&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 61,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524329408473&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 81,
+                &quot;true_name&quot;: &quot;☞&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/O1Gx6YFajwl16kRPDtMwswGhyowKAp4iaqCibv4c2ibrdLrVHBhKo03qCdgGf8k4zDZGYibdMACAb5SysUYdHt0gUQ/0&quot;,
+                &quot;eavl&quot;: &quot;安生&quot;,
+                &quot;time&quot;: &quot;2018-04-22 02:06:31&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 62,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524334123111&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 81,
+                &quot;true_name&quot;: &quot;☞&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/O1Gx6YFajwl16kRPDtMwswGhyowKAp4iaqCibv4c2ibrdLrVHBhKo03qCdgGf8k4zDZGYibdMACAb5SysUYdHt0gUQ/0&quot;,
+                &quot;eavl&quot;: &quot;测试测试&quot;,
+                &quot;time&quot;: &quot;2018-04-22 02:10:30&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 63,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524334383426&quot;,
+                &quot;goods_name&quot;: &quot;必宝5&quot;,
+                &quot;user_id&quot;: 81,
+                &quot;true_name&quot;: &quot;☞&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/O1Gx6YFajwl16kRPDtMwswGhyowKAp4iaqCibv4c2ibrdLrVHBhKo03qCdgGf8k4zDZGYibdMACAb5SysUYdHt0gUQ/0&quot;,
+                &quot;eavl&quot;: &quot;急急急进攻&quot;,
+                &quot;time&quot;: &quot;2018-04-22 02:14:57&quot;,
+                &quot;star&quot;: 3
+            }
+        ]
+    }
+}</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.3.10、获取某商铺的评论</h3><div style="margin-left:30px;"><p>欢迎使用ShowDoc！</p>
+<p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取某商铺的评论</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/comment/GetOShopComment</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">shop_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>店铺id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;ok&quot;,
+    &quot;data&quot;: {
+        &quot;comment&quot;: [
+            {
+                &quot;id&quot;: 17,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1523982679884&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 53,
+                &quot;true_name&quot;: &quot;☞&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/O1Gx6YFajwl16kRPDtMwswGhyowKAp4iaqCibv4c2ibrdLrVHBhKo03qCdgGf8k4zDZGYibdMACAb5SysUYdHt0gUQ/0&quot;,
+                &quot;eavl&quot;: &quot;非常好&quot;,
+                &quot;time&quot;: &quot;2018-04-18 11:02:12&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 18,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524074257794&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 50,
+                &quot;true_name&quot;: &quot;烟淡黄昏&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ep4Ts4icQNq4UoIWbHPpXJUVyEvITWe0XJVDLBGm2d9Hf7JCmGSsoY4VlVMVsbBiaanUo3jMmdnxNuQ/0&quot;,
+                &quot;eavl&quot;: &quot;还行&quot;,
+                &quot;time&quot;: &quot;2018-04-19 09:40:34&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 19,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524074015276&quot;,
+                &quot;goods_name&quot;: &quot;water&quot;,
+                &quot;user_id&quot;: 62,
+                &quot;true_name&quot;: &quot;wuzhibo&quot;,
+                &quot;user_img&quot;: &quot;asdasdsad&quot;,
+                &quot;eavl&quot;: &quot;GG&quot;,
+                &quot;time&quot;: &quot;2018-04-19 12:02:14&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 20,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524193336965&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 71,
+                &quot;true_name&quot;: &quot;NoName&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/yByWWFaiaDZ5NJJPqVfMC9PsxP3ha3Of4OczjNH2LicmqftmoNK4mnEQpiaxujRPCdEdqkZcB5VMcHgQUfhDeYT5Q/0&quot;,
+                &quot;eavl&quot;: &quot;噼噼啪啪&quot;,
+                &quot;time&quot;: &quot;2018-04-20 11:12:49&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 21,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524210709688&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 47,
+                &quot;true_name&quot;: &quot;浪子小卢&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/8CDhvLgPPNwiad60nAZYgrG6OKlJkA6SOK9AyMp8PrzvKG7fPS519wzS4OKkYQqJsWljoIHgQCH7bHhc4s6MU2w/0&quot;,
+                &quot;eavl&quot;: &quot;aaa &quot;,
+                &quot;time&quot;: &quot;2018-04-20 21:07:55&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 22,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524240654249&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 74,
+                &quot;true_name&quot;: &quot;☞&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/O1Gx6YFajwl16kRPDtMwswGhyowKAp4iaqCibv4c2ibrdLrVHBhKo03qCdgGf8k4zDZGYibdMACAb5SysUYdHt0gUQ/0&quot;,
+                &quot;eavl&quot;: &quot;哈哈&quot;,
+                &quot;time&quot;: &quot;2018-04-21 00:13:23&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 16,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1523895986877&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 50,
+                &quot;true_name&quot;: &quot;烟淡黄昏&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ep4Ts4icQNq4UoIWbHPpXJUVyEvITWe0XJVDLBGm2d9Hf7JCmGSsoY4VlVMVsbBiaanUo3jMmdnxNuQ/0&quot;,
+                &quot;eavl&quot;: &quot;enen&quot;,
+                &quot;time&quot;: &quot;2018-04-18 10:25:17&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 23,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 13:45:32&quot;,
+                &quot;star&quot;: 5
+            },
+            {
+                &quot;id&quot;: 24,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:05:07&quot;,
+                &quot;star&quot;: 5
+            },
+            {
+                &quot;id&quot;: 25,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:06:09&quot;,
+                &quot;star&quot;: 5
+            },
+            {
+                &quot;id&quot;: 26,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:06:28&quot;,
+                &quot;star&quot;: 5
+            },
+            {
+                &quot;id&quot;: 27,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:06:50&quot;,
+                &quot;star&quot;: 5
+            },
+            {
+                &quot;id&quot;: 28,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:09:39&quot;,
+                &quot;star&quot;: 5
+            },
+            {
+                &quot;id&quot;: 45,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:27:54&quot;,
+                &quot;star&quot;: 2
+            },
+            {
+                &quot;id&quot;: 44,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:23:23&quot;,
+                &quot;star&quot;: 2
+            },
+            {
+                &quot;id&quot;: 43,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:15:57&quot;,
+                &quot;star&quot;: 2
+            },
+            {
+                &quot;id&quot;: 41,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:15:25&quot;,
+                &quot;star&quot;: 2
+            },
+            {
+                &quot;id&quot;: 42,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524280687832&quot;,
+                &quot;goods_name&quot;: &quot;apple&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;啵啵&quot;,
+                &quot;user_img&quot;: &quot;www.baiud.com&quot;,
+                &quot;eavl&quot;: &quot;bo&quot;,
+                &quot;time&quot;: &quot;2018-04-21 14:15:26&quot;,
+                &quot;star&quot;: 2
+            },
+            {
+                &quot;id&quot;: 55,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524328432109&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 81,
+                &quot;true_name&quot;: &quot;☞&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/O1Gx6YFajwl16kRPDtMwswGhyowKAp4iaqCibv4c2ibrdLrVHBhKo03qCdgGf8k4zDZGYibdMACAb5SysUYdHt0gUQ/0&quot;,
+                &quot;eavl&quot;: &quot;好好好&quot;,
+                &quot;time&quot;: &quot;2018-04-22 00:49:30&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 58,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524326796831&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 78,
+                &quot;true_name&quot;: &quot;烟淡黄昏&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ep4Ts4icQNq4UoIWbHPpXJUVyEvITWe0XJVDLBGm2d9Hf7JCmGSsoY4VlVMVsbBiaanUo3jMmdnxNuQ/0&quot;,
+                &quot;eavl&quot;: &quot;我是个好人&quot;,
+                &quot;time&quot;: &quot;2018-04-22 01:43:06&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 61,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524329408473&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 81,
+                &quot;true_name&quot;: &quot;☞&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/O1Gx6YFajwl16kRPDtMwswGhyowKAp4iaqCibv4c2ibrdLrVHBhKo03qCdgGf8k4zDZGYibdMACAb5SysUYdHt0gUQ/0&quot;,
+                &quot;eavl&quot;: &quot;安生&quot;,
+                &quot;time&quot;: &quot;2018-04-22 02:06:31&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 62,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524334123111&quot;,
+                &quot;goods_name&quot;: &quot;怡宝&quot;,
+                &quot;user_id&quot;: 81,
+                &quot;true_name&quot;: &quot;☞&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/O1Gx6YFajwl16kRPDtMwswGhyowKAp4iaqCibv4c2ibrdLrVHBhKo03qCdgGf8k4zDZGYibdMACAb5SysUYdHt0gUQ/0&quot;,
+                &quot;eavl&quot;: &quot;测试测试&quot;,
+                &quot;time&quot;: &quot;2018-04-22 02:10:30&quot;,
+                &quot;star&quot;: 3
+            },
+            {
+                &quot;id&quot;: 63,
+                &quot;shop_id&quot;: 4,
+                &quot;order_id&quot;: &quot;1524334383426&quot;,
+                &quot;goods_name&quot;: &quot;必宝5&quot;,
+                &quot;user_id&quot;: 81,
+                &quot;true_name&quot;: &quot;☞&quot;,
+                &quot;user_img&quot;: &quot;https://wx.qlogo.cn/mmopen/vi_32/O1Gx6YFajwl16kRPDtMwswGhyowKAp4iaqCibv4c2ibrdLrVHBhKo03qCdgGf8k4zDZGYibdMACAb5SysUYdHt0gUQ/0&quot;,
+                &quot;eavl&quot;: &quot;急急急进攻&quot;,
+                &quot;time&quot;: &quot;2018-04-22 02:14:57&quot;,
+                &quot;star&quot;: 3
+            }
+        ]
+    }
+}</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.3.11、商家获取所有骑手</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>商家获取所有骑手</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/shop/shopers</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>成功：
+{
+        &quot;sid&quot;: 31,
+        &quot;user_id&quot;: 81,
+        &quot;shop_id&quot;: 4,
+        &quot;name&quot;: null,
+        &quot;password&quot;: null,
+        &quot;realname&quot;: &quot;杨吊吊&quot;,
+        &quot;mobile&quot;: &quot;18814376329&quot;,
+        &quot;id_pic&quot;: &quot;/uploads/20180422/ee30eec10db3f0a8f6ed68b13ca7eed3.jpg&quot;,
+        &quot;id_pic_back&quot;: &quot;/uploads/20180422/aa2f6f60ec665f85258b5f24913dfa4b.jpg&quot;,
+        &quot;is_default&quot;: 0
+    },
+    {
+        &quot;sid&quot;: 30,
+        &quot;user_id&quot;: 78,
+        &quot;shop_id&quot;: 4,
+        &quot;name&quot;: null,
+        &quot;password&quot;: null,
+        &quot;realname&quot;: &quot;bo&quot;,
+        &quot;mobile&quot;: &quot;18819470669&quot;,
+        &quot;id_pic&quot;: &quot;2&quot;,
+        &quot;id_pic_back&quot;: &quot;啵啵&quot;,
+        &quot;is_default&quot;: 0
+    },
+    {
+        &quot;sid&quot;: 29,
+        &quot;user_id&quot;: 75,
+        &quot;shop_id&quot;: 4,
+        &quot;name&quot;: null,
+        &quot;password&quot;: null,
+        &quot;realname&quot;: &quot;啵啵&quot;,
+        &quot;mobile&quot;: &quot;18819470586&quot;,
+        &quot;id_pic&quot;: &quot;/uploads/20180421/e5c7248c2d3cb4e21df22dcf4a4ad6fd.png&quot;,
+        &quot;id_pic_back&quot;: &quot;/uploads/20180421/3e80b3d2cce635d7d34ae8001536c44d.png&quot;,
+        &quot;is_default&quot;: 0
+    },
+    {
+        &quot;sid&quot;: 26,
+        &quot;user_id&quot;: 76,
+        &quot;shop_id&quot;: 4,
+        &quot;name&quot;: null,
+        &quot;password&quot;: null,
+        &quot;realname&quot;: &quot;reclame&quot;,
+        &quot;mobile&quot;: &quot;13413174069&quot;,
+        &quot;id_pic&quot;: &quot;/uploads/20180421/e5c7248c2d3cb4e21df22dcf4a4ad6fd.png&quot;,
+        &quot;id_pic_back&quot;: &quot;/uploads/20180421/3e80b3d2cce635d7d34ae8001536c44d.png&quot;,
+        &quot;is_default&quot;: 0
+    }
+没骑手时：
+{
+    &quot;code&quot;: 1001,
+    &quot;msg&quot;: &quot;暂时没有骑手信息&quot;,
+    &quot;data&quot;: {
+        &quot;reqeust_url&quot;: &quot;/api/v1/shop/shopers&quot;
+    }
+}</code></pre></table></div><h3>6.3.12、商家添加骑手</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>商家添加骑手</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/shoper/addShoper</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">shop_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>店铺id</td>
+</tr>
+<tr>
+<td style="text-align: left;">mobile</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>手机号</td>
+</tr>
+<tr>
+<td style="text-align: left;">realname</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>真实姓名</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_pic</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>身份证正面</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_pic_back</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>身份证背面</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>成功：
+{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;成功&quot;,
+    &quot;data&quot;: []
+}
+失败：
+    {
+    &quot;code&quot;: 201,
+    &quot;msg&quot;: &quot;平台暂无该用户&quot;,
+    &quot;data&quot;: []
+    }
+    {
+    &quot;code&quot;: 201,
+    &quot;msg&quot;: &quot;已是骑手，无法再次添加&quot;,
+    &quot;data&quot;: []
+    }</code></pre></table></div><h3>6.3.13、获取商家的待发货的订单数量</h3><div style="margin-left:30px;"><p>欢迎使用ShowDoc！</p>
+<p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取商家的待发货的订单数量</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/order/shopWait</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;获取成功&quot;,
+    &quot;data&quot;: {
+        &quot;count&quot;: 1
+    }
+}</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.3.14、显示已审核商家</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>用户注册接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/shop/getAllShop</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p>|参数名|必选|类型|说明|
+无</p>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>  {
+    &quot;code&quot;: 200,
+    &quot;shop&quot;: [
+        {
+            &quot;user_id&quot;: 16,
+            &quot;shop_name&quot;: &quot;某度服务站&quot;,
+            &quot;shop_phone&quot;: &quot;18156569853&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区三东大道西&quot;,
+            &quot;updatetime&quot;: &quot;1970-01-01 10:46:39&quot;,
+            &quot;longitude&quot;: &quot;9999.999999&quot;,
+            &quot;latitude&quot;: 23416548,
+            &quot;shop_pic&quot;: &quot;public/upload/shoper/2018-03-23/1521770103bibao (3).jpg&quot;,
+            &quot;id_pic&quot;: &quot;public/upload/shoper/2018-03-23/1521770103bibao (2).jpg&quot;,
+            &quot;lience_pic&quot;: &quot;public/upload/shoper/2018-03-23/1521770103bibao (1).jpg&quot;,
+            &quot;email&quot;: &quot;1234@qq.com&quot;,
+            &quot;registertime&quot;: &quot;2018-03-23 09:55:03&quot;,
+            &quot;is_check&quot;: 1
+        }
+    ]
+}</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">is_check</td>
+<td style="text-align: left;">int</td>
+<td>是否审核，0：未审核；1：已审核</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul>
+<p>欢迎使用ShowDoc！</p></div><h3>6.3.15、显示我的商铺</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<p>显示我的商铺</p>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/shop/getMyShop</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST
+<strong>参数：</strong> </li>
+</ul>
+<p>|参数名|必选|类型|说明|
+token| 是 |string|令牌|</p>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>  {
+    &quot;code&quot;: 200,
+    &quot;shop&quot;: [
+        {
+            &quot;user_id&quot;: 16,
+            &quot;shop_name&quot;: &quot;某度服务站&quot;,
+            &quot;shop_phone&quot;: &quot;18156569853&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区三东大道西&quot;,
+            &quot;updatetime&quot;: &quot;1970-01-01 10:46:39&quot;,
+            &quot;longitude&quot;: &quot;9999.999999&quot;,
+            &quot;latitude&quot;: 23416548,
+            &quot;shop_pic&quot;: &quot;public/upload/shoper/2018-03-23/1521770103bibao (3).jpg&quot;,
+            &quot;id_pic&quot;: &quot;public/upload/shoper/2018-03-23/1521770103bibao (2).jpg&quot;,
+            &quot;lience_pic&quot;: &quot;public/upload/shoper/2018-03-23/1521770103bibao (1).jpg&quot;,
+            &quot;email&quot;: &quot;1234@qq.com&quot;,
+            &quot;registertime&quot;: &quot;2018-03-23 09:55:03&quot;,
+            &quot;is_check&quot;: 1
+        }
+    ]
+}</code></pre></table></div><h3>6.3.16、上传修改商铺信息</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<p>-上传修改商铺信息</p>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/shop/addShop</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">shop_name</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>店铺名</td>
+</tr>
+<tr>
+<td style="text-align: left;">shop_phone</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>手机号码</td>
+</tr>
+<tr>
+<td style="text-align: left;">shop_HQ</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>地址</td>
+</tr>
+<tr>
+<td style="text-align: left;">shop_address_detail</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>详细地址</td>
+</tr>
+<tr>
+<td style="text-align: left;">shop_pic</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>商铺图片</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_pic</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>身份证图片</td>
+</tr>
+<tr>
+<td style="text-align: left;">lience_pic</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>执照图片</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_pic_back</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>身份证反面图片</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code> {
+ &quot;code&quot;:200,
+ &quot;msg&quot;:&quot;处理成功，请交押金&quot;
+ &quot;data&quot;: {
+        &quot;fre&quot;: 0.01
+    }
+ }</code></pre></table></div><h3>6.3.17、商家派单</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>商家派单</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/order/shoper</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>订单id</td>
+</tr>
+<tr>
+<td style="text-align: left;">sid</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>骑手id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>  {
+    &quot;code&quot;:200,
+    &quot;msg&quot;:&quot;派单成功&quot;
+  }
+
+  {
+    &quot;code&quot;:-202,
+    &quot;msg&quot;:&quot;该订单已派&quot;
+  }
+
+  {
+    &quot;code&quot;:-201,
+    &quot;msg&quot;:&quot;订单不存在&quot;
+  }
+
+  {
+    &quot;code&quot;:-200,
+    &quot;msg&quot;:&quot;您不是商家无权派单&quot;
+  }
+</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div><h2>6.4、普通用户</h2><div style="margin-left:20px;"><h3>6.4.1、上传图片</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>上传图片</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/upload</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">file</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>文件</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>成功：
+{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;upload success&quot;,
+    &quot;filename&quot;: &quot;/uploads/20180422/19937e076b36169b2ad5530b639cc5fc.jpg&quot;
+}
+失败：
+{
+    &quot;code&quot;: -200,
+    &quot;msg&quot;: &quot;upload error&quot;
+}
+</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.4.2、获取当前用户押金订单</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取当前用户押金订单</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/user/getFreNow</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户令牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_role</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>角色</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>成功：
+ {
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;押金获取成功&quot;,
+    &quot;data&quot;: {
+        &quot;fre_now&quot;: {
+            &quot;id&quot;: 40,
+            &quot;order_id&quot;: &quot;p_1524318923_75&quot;,
+            &quot;user_id&quot;: 75,
+            &quot;type&quot;: 1,
+            &quot;price&quot;: &quot;0.01&quot;,
+            &quot;o_builddate&quot;: &quot;2018-04-21 21:55:59&quot;,
+            &quot;status&quot;: 0
+        }
+    }
+}
+失败：
+{
+    &quot;code&quot;: 201,
+    &quot;msg&quot;: &quot;该用户暂无交押金&quot;,
+    &quot;data&quot;: []
+}</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.4.3、用户交押金</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>用户交押金</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/user/payOrder</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code> {
+    &quot;appId&quot;: &quot;wx1fbcf9abe2de12d7&quot;,
+    &quot;timeStamp&quot;: &quot;1523263382&quot;,
+    &quot;nonceStr&quot;: &quot;4se0df74zbrn5qz34hyskneuhan3gxkl&quot;,
+    &quot;package&quot;:         &quot;prepay_id=wx09164301041173bd5a0d3ce12923126736&quot;,
+    &quot;signType&quot;: &quot;MD5&quot;,
+    &quot;return_code&quot;: &quot;SUCCESS&quot;,
+    &quot;result_code&quot;: &quot;SUCCESS&quot;,
+    &quot;paySign&quot;: &quot;4C3E5265A064BBDEF5BA2F479F060B38&quot;
+}</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<p>|微信返回错误说明|
+详情请见微信小程序支付文档</p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.4.4、获取用户审核和押金状况</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取用户审核和押金状况</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/user/getExamineAndFre</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户令牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_role</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;角色详细信息&quot;,
+    &quot;data&quot;: {
+        &quot;userAndcompany&quot;: 1,
+        &quot;shop&quot;: 1,
+        &quot;shop_fre_status&quot;: 1,
+        &quot;shop_check_status&quot;: 1,
+        &quot;user_fre_status&quot;: 0,
+        &quot;company_fre_status&quot;: 0,
+        &quot;fre&quot;: {
+            &quot;user_fre&quot;: &quot;0.01&quot;,
+            &quot;shop_fre&quot;: &quot;0.01&quot;,
+            &quot;company_fre&quot;: &quot;0.01&quot;
+        }
+    }
+}</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>是否提交/通过：1是0否</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">userAndcompany</td>
+<td style="text-align: left;">string</td>
+<td>个人资料</td>
+</tr>
+<tr>
+<td style="text-align: left;">shop</td>
+<td style="text-align: left;">string</td>
+<td>商家资料</td>
+</tr>
+<tr>
+<td style="text-align: left;">shop_fre_status</td>
+<td style="text-align: left;">string</td>
+<td>商家押金</td>
+</tr>
+<tr>
+<td style="text-align: left;">shop_check_status</td>
+<td style="text-align: left;">string</td>
+<td>商家审核</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_fre_status</td>
+<td style="text-align: left;">string</td>
+<td>个人用户押金</td>
+</tr>
+<tr>
+<td style="text-align: left;">company_fre_status</td>
+<td style="text-align: left;">string</td>
+<td>个人企业押金</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.4.5、用户添加修改地址</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>添加修改地址</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/user/createOrUpdateAddresses</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>header请求头参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_address</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>地址</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_phone</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>手机（11位）</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_floor</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>楼层</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_iselevator</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>1是 ，0否 有电梯</td>
+</tr>
+<tr>
+<td style="text-align: left;">latitude</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">decimal</td>
+<td>经度</td>
+</tr>
+<tr>
+<td style="text-align: left;">longitude</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">decimal</td>
+<td>纬度</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>//失败
+{
+    &quot;msg&quot;: &quot;user_address不能为空&quot;,
+    &quot;error_code&quot;: 10000,
+    &quot;reqeust_url&quot;: &quot;/api/v1/user/createOrUpdateAddresses&quot;
+}
+
+//成功
+{
+  code:200,
+  msg:&quot;成功&quot;
+  data:[]
+}
+{
+code: 201,
+msg: &quot;暂无地址信息&quot;,
+data: []
+}
+</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div><h3>6.4.6、判断角色</h3><div style="margin-left:30px;"><p>欢迎使用ShowDoc！</p>
+<p><strong>简要描述：</strong> </p>
+<ul>
+<li>判断角色</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/user/checkUserRole</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;角色判断&quot;,
+    &quot;data&quot;: {
+        &quot;role&quot;: 3
+    }
+}</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.4.7、下单</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>下单</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/order/addOrder</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">shop_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>店铺id</td>
+</tr>
+<tr>
+<td style="text-align: left;">product_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>商品id</td>
+</tr>
+<tr>
+<td style="text-align: left;">note</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>备注</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>成功：
+{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;下单成功&quot;,
+    &quot;data&quot;: {
+        &quot;data&quot;: {
+            &quot;id&quot;: 818,
+            &quot;order_id&quot;: &quot;1524380955197&quot;,
+            &quot;num&quot;: 4,
+            &quot;order_status&quot;: 1,
+            &quot;shop_id&quot;: 4,
+            &quot;shoper_id&quot;: null,
+            &quot;user_id&quot;: 75,
+            &quot;product_id&quot;: 11,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;is_business&quot;: 1,
+            &quot;updatetime&quot;: 1524380955,
+            &quot;o_builddate&quot;: 1524380955,
+            &quot;senddate&quot;: null,
+            &quot;o_address&quot;: &quot;广东省广州市花都区花都区政府&quot;,
+            &quot;o_phone&quot;: &quot;18819470586&quot;,
+            &quot;payway&quot;: null,
+            &quot;prepay_id&quot;: &quot;&quot;,
+            &quot;note&quot;: &quot;1&quot;
+        }
+    }
+}
+失败：
+{
+    &quot;code&quot;: 201,
+    &quot;msg&quot;: &quot;没有库存，不能下单&quot;,
+    &quot;data&quot;: []
+}
+
+{
+    &quot;code&quot;: 201,
+    &quot;msg&quot;: &quot;您是商家，不能下单&quot;,
+    &quot;data&quot;: []
+}
+</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">略</td>
+<td style="text-align: left;">略</td>
+<td>略</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul>
+<p>欢迎使用ShowDoc！</p></div><h3>6.4.8、支付订单</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>支付订单</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/order/payThisOrder</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>订单id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;appId&quot;: &quot;wx9f326c11be6fc222&quot;,
+    &quot;timeStamp&quot;: &quot;1524381142&quot;,
+    &quot;nonceStr&quot;: &quot;vzci77nihdzvkn50u923nzcoosjgp2eq&quot;,
+    &quot;package&quot;: &quot;prepay_id=wx221512228731987e9619ceaf1466071227&quot;,
+    &quot;signType&quot;: &quot;MD5&quot;,
+    &quot;paySign&quot;: &quot;4E2FF9AA992A1F36BF8986200835F22E&quot;
+}
+</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">略</td>
+<td style="text-align: left;">略</td>
+<td>略</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul>
+<p>欢迎使用ShowDoc！</p></div><h3>6.4.9、获取普通用户订单</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取普通用户订单</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/user/orders</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>  [
+    {
+        &quot;id&quot;: 550,
+        &quot;order_id&quot;: &quot;1521618002135&quot;,
+        &quot;num&quot;: 3,
+        &quot;order_status&quot;: 3,
+        &quot;shop_id&quot;: 2,
+        &quot;shoper_id&quot;: 5,
+        &quot;user_id&quot;: 18,
+        &quot;product_id&quot;: 12,
+        &quot;updatetime&quot;: 1521618002,
+        &quot;o_builddate&quot;: 1521618002,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;广州花都区测试街111号&quot;,
+        &quot;payway&quot;: null,
+        &quot;products&quot;: null,
+        &quot;users&quot;: {
+            &quot;user_id&quot;: 18,
+            &quot;user_name&quot;: null,
+            &quot;user_wxid&quot;: &quot;oyqP_0Hg0i-PWuRvSaOOXrLA9b74&quot;,
+            &quot;user_role&quot;: 1,
+            &quot;user_status&quot;: 1,
+            &quot;updatatime&quot;: &quot;2018-04-09 16:00:15&quot;,
+            &quot;registertime&quot;: &quot;2018-04-09 16:00:15&quot;,
+            &quot;u_gender&quot;: null,
+            &quot;u_isvip&quot;: null
+        },
+        &quot;shopers&quot;: {
+            &quot;sid&quot;: 5,
+            &quot;user_id&quot;: 13,
+            &quot;shop_id&quot;: 1,
+            &quot;name&quot;: &quot;啦啦啦&quot;,
+            &quot;password&quot;: &quot;e10adc3949ba59abbe56&quot;,
+            &quot;realname&quot;: &quot;特步&quot;,
+            &quot;mobile&quot;: &quot;13174514094&quot;,
+            &quot;id_pic&quot;: null
+        }
+    },
+    {
+        &quot;id&quot;: 551,
+        &quot;order_id&quot;: &quot;1521618156876&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 1,
+        &quot;shop_id&quot;: 1,
+        &quot;shoper_id&quot;: 6,
+        &quot;user_id&quot;: 18,
+        &quot;product_id&quot;: 12,
+        &quot;updatetime&quot;: 1521618156,
+        &quot;o_builddate&quot;: 1521618156,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;广州花都区测试街111号&quot;,
+        &quot;payway&quot;: null,
+        &quot;products&quot;: null,
+        &quot;users&quot;: {
+            &quot;user_id&quot;: 18,
+            &quot;user_name&quot;: null,
+            &quot;user_wxid&quot;: &quot;oyqP_0Hg0i-PWuRvSaOOXrLA9b74&quot;,
+            &quot;user_role&quot;: 1,
+            &quot;user_status&quot;: 1,
+            &quot;updatatime&quot;: &quot;2018-04-09 16:00:15&quot;,
+            &quot;registertime&quot;: &quot;2018-04-09 16:00:15&quot;,
+            &quot;u_gender&quot;: null,
+            &quot;u_isvip&quot;: null
+        },
+        &quot;shopers&quot;: {
+            &quot;sid&quot;: 6,
+            &quot;user_id&quot;: 2,
+            &quot;shop_id&quot;: 2,
+            &quot;name&quot;: &quot;送水啦&quot;,
+            &quot;password&quot;: &quot;e10adc3949ba59abbe56&quot;,
+            &quot;realname&quot;: &quot;12331&quot;,
+            &quot;mobile&quot;: &quot;1234561111&quot;,
+            &quot;id_pic&quot;: null
+        }
+    }
+]</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<p>|参数名|类型|说明|</p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul>
+<p>欢迎使用ShowDoc！</p></div><h3>6.4.10、个人用户订单下各个订单所属状态的数量</h3><div style="margin-left:30px;"><p>欢迎使用ShowDoc！</p>
+<p><strong>简要描述：</strong> </p>
+<ul>
+<li>个人用户订单下各个订单所属状态的数量</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/order/userWait</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;获取成功&quot;,
+    &quot;data&quot;: {
+        &quot;count_1&quot;: 1,
+        &quot;count_2&quot;: 2,
+        &quot;count_3&quot;: 0
+    }
+}</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.4.11、添加个人用户/个人企业信息</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>添加个人用户/个人企业信息</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/user/createOrUpdateUserInfo</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_name</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_phone</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>手机号</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_floor</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>所在楼层</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_iselevator</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>是否有电梯</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_address</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>地址</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_address_detail</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>详细地址</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_role</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>角色</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>成功：
+{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;更新成功&quot;,
+    &quot;data&quot;: {
+        &quot;user_id&quot;: 75,
+        &quot;user_name&quot;: &quot;bb&quot;,
+        &quot;user_wxid&quot;: &quot;oyeOJ5R7k7S5ggYD2744pId01666&quot;,
+        &quot;user_role&quot;: 1,
+        &quot;user_status&quot;: 1,
+        &quot;updatatime&quot;: &quot;2018-04-22 13:02:52&quot;,
+        &quot;registertime&quot;: &quot;2018-04-20 23:43:55&quot;,
+        &quot;u_gender&quot;: null,
+        &quot;u_isvip&quot;: null,
+        &quot;fre&quot;: &quot;0.01&quot;
+    }
+}
+失败：
+   {
+   &quot;code&quot;:1001,
+   &quot;msg&quot;:&quot;手机号格式错误&quot;,
+   &quot;data&quot;:{
+       &quot;reqeust_url&quot;:&quot;\/api\/v1\/user\/createOrUpdateUserInfo&quot;
+       }
+   }
+</code></pre></table></div><h3>6.4.12、切换角色</h3><div style="margin-left:30px;"><p>欢迎使用ShowDoc！</p>
+<p><strong>简要描述：</strong> </p>
+<ul>
+<li>切换角色</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/user/changeUserRole</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">role</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>角色 1个人，2骑手，3商家，4个人企业</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>成功：
+    {
+    &quot;code&quot;:200,
+    &quot;msg&quot;:&quot;已切换为企业用户！&quot;,
+    &quot;data&quot;:[]
+    }
+失败：
+    {
+    &quot;code&quot;:201,
+    &quot;msg&quot;:&quot;已是企业用户，不用切换！&quot;,
+    &quot;data&quot;:[]
+    }
+
+    {
+    &quot;code&quot;:201,
+    &quot;msg&quot;:&quot;请交个人企业押金！&quot;,
+    &quot;data&quot;:[]
+    }
+
+    {
+    &quot;code&quot;:201,
+    &quot;msg&quot;:&quot;角色传参错误！&quot;,
+    &quot;data&quot;:[]
+    }
+</code></pre></table></div><h3>6.4.13、获取用户地址接口</h3><div style="margin-left:30px;"><p>欢迎使用ShowDoc！</p>
+<p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取用户地址接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>https://xxx.com/api/v1/user/getAddresses</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code> //无地址
+ {
+    &quot;msg&quot;: &quot;暂无地址信息&quot;,
+    &quot;error_code&quot;: 10000,
+    &quot;reqeust_url&quot;: &quot;/api/v1/user/getAddresses&quot;
+}
+、、有地址
+{
+    &quot;user_id&quot;: 18,
+    &quot;user_phone&quot;: &quot;18819475212&quot;,
+    &quot;user_address&quot;: &quot;广东省广州市花都区大润发云顶沐足城&quot;,
+    &quot;user_floor&quot;: 6,
+    &quot;user_iselevator&quot;: 0,
+    &quot;user_fre&quot;: 1,
+    &quot;latitude&quot;: &quot;24.403910&quot;,
+    &quot;longitude&quot;: &quot;112.220260&quot;,
+    &quot;updatatime&quot;: &quot;2018-03-19 00:47:41&quot;
+}</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">user_fre</td>
+<td style="text-align: left;">int</td>
+<td>1：已交押金；2：未交押金</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.4.14、获取经纬度</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取经纬度</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/location</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">address</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>地址</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>成功：
+{
+    &quot;status&quot;: 0,
+    &quot;result&quot;: {
+        &quot;location&quot;: {
+            &quot;lng&quot;: 119.79304879418045,
+            &quot;lat&quot;: 31.69148130853793
+        },
+        &quot;precise&quot;: 1,
+        &quot;confidence&quot;: 80,
+        &quot;level&quot;: &quot;购物&quot;
+    }
+}
+失败：
+{
+    &quot;status&quot;: 1,
+    &quot;msg&quot;: &quot;Internal Service Error:无相关结果&quot;,
+    &quot;results&quot;: []
+}
+</code></pre></table></div><h3>6.4.15、获取某一订单</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取某一订单</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/order/orderDetail</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>订单id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>成功：
+{
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;订单获取成功&quot;,
+    &quot;data&quot;: {
+        &quot;nowOrders&quot;: {
+            &quot;id&quot;: 793,
+            &quot;order_id&quot;: &quot;1524324783897&quot;,
+            &quot;num&quot;: 2,
+            &quot;order_status&quot;: 3,
+            &quot;shop_id&quot;: 4,
+            &quot;shoper_id&quot;: 29,
+            &quot;user_id&quot;: 75,
+            &quot;product_id&quot;: 11,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;is_business&quot;: 0,
+            &quot;updatetime&quot;: 1524324783,
+            &quot;o_builddate&quot;: 1524324783,
+            &quot;senddate&quot;: null,
+            &quot;o_address&quot;: &quot;北京市北京市东城区大通公园&quot;,
+            &quot;o_phone&quot;: &quot;18819470586&quot;,
+            &quot;payway&quot;: null,
+            &quot;prepay_id&quot;: &quot;wx212333041816417a3214a8c40054209064&quot;,
+            &quot;note&quot;: &quot;&quot;,
+            &quot;products&quot;: {
+                &quot;id&quot;: 11,
+                &quot;shop_id&quot;: 4,
+                &quot;product_N&quot;: &quot;怡宝&quot;,
+                &quot;price&quot;: 66,
+                &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+                &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+                &quot;builddate&quot;: 1521216080,
+                &quot;updatatime&quot;: 1521216080
+            },
+            &quot;users&quot;: {
+                &quot;user_id&quot;: 75,
+                &quot;user_name&quot;: &quot;波波波波波&quot;,
+                &quot;user_phone&quot;: &quot;18819470586&quot;,
+                &quot;user_address&quot;: &quot;北京市北京市东城区&quot;,
+                &quot;user_address_detail&quot;: &quot;大通公园&quot;,
+                &quot;user_floor&quot;: 4,
+                &quot;user_iselevator&quot;: 0,
+                &quot;user_fre&quot;: 1,
+                &quot;business_fre&quot;: 1,
+                &quot;latitude&quot;: &quot;39.938574&quot;,
+                &quot;longitude&quot;: &quot;116.421885&quot;,
+                &quot;updatatime&quot;: &quot;2018-04-22 00:51:12&quot;,
+                &quot;is_business&quot;: 1,
+                &quot;id_pic&quot;: null,
+                &quot;id_pic_back&quot;: null,
+                &quot;license&quot;: null,
+                &quot;store_photo&quot;: null
+            },
+            &quot;shopers&quot;: {
+                &quot;sid&quot;: 29,
+                &quot;user_id&quot;: 75,
+                &quot;shop_id&quot;: 4,
+                &quot;name&quot;: null,
+                &quot;password&quot;: null,
+                &quot;realname&quot;: &quot;啵啵&quot;,
+                &quot;mobile&quot;: &quot;18819470586&quot;,
+                &quot;id_pic&quot;: &quot;/uploads/20180421/e5c7248c2d3cb4e21df22dcf4a4ad6fd.png&quot;,
+                &quot;id_pic_back&quot;: &quot;/uploads/20180421/3e80b3d2cce635d7d34ae8001536c44d.png&quot;,
+                &quot;is_default&quot;: 0
+            },
+            &quot;shops&quot;: {
+                &quot;shop_id&quot;: 4,
+                &quot;user_id&quot;: 75,
+                &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+                &quot;shop_phone&quot;: &quot;14353456457&quot;,
+                &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+                &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+                &quot;latitude&quot;: &quot;23.400480&quot;,
+                &quot;longitude&quot;: &quot;113.220190&quot;,
+                &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+                &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+                &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+                &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+                &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+                &quot;email&quot;: null,
+                &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+                &quot;is_check&quot;: 1,
+                &quot;is_pay&quot;: 1,
+                &quot;service_fee&quot;: &quot;0.01&quot;,
+                &quot;star&quot;: 3
+            }
+        }
+    }
+}
+没订单：
+   {
+    &quot;code&quot;:201,
+    &quot;msg&quot;:&quot;订单未找到&quot;,
+    &quot;data&quot;:[]
+    }</code></pre></table></div><h3>6.4.16、确认收货</h3><div style="margin-left:30px;"><p>欢迎使用ShowDoc！</p>
+<p><strong>简要描述：</strong> </p>
+<ul>
+<li>用户注册接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/order/dispatchOrdersOk</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>订单id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;code&quot;:200,
+    &quot;msg&quot;:&quot;确定成功&quot;
+}
+
+{
+    &quot;code&quot;:-201,
+    &quot;msg&quot;:&quot;订单不存在&quot;
+}
+
+{
+    &quot;code&quot;:-200,
+    &quot;msg&quot;:&quot;您无权&quot;
+}</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.4.17、获取用户手机</h3><div style="margin-left:30px;"><p>欢迎使用ShowDoc！</p>
+<p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取用户手机</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/user/getPhone</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+<th>与用户数据一同返回的初始向量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">encryptedData</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>加密的用户数据</td>
+</tr>
+<tr>
+<td style="text-align: left;">iv</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>与用户数据一同返回的初始向量</td>
+</tr>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>   {
+    &quot;phoneNumber&quot;:&quot;18818888888&quot;,
+    &quot;purePhoneNumber&quot;:&quot;18818888888&quot;,
+    &quot;countryCode&quot;:&quot;86&quot;,
+    &quot;watermark&quot;:
+        {
+        &quot;timestamp&quot;:1523723478,
+        &quot;appid&quot;:&quot;wx9f326c11be34523&quot;
+        }
+   }</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.4.18、用户添加评论</h3><div style="margin-left:30px;"><p>欢迎使用ShowDoc！</p>
+<p><strong>简要描述：</strong> </p>
+<ul>
+<li>用户添加评论</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/comment/UserAddComment</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">true_name</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>真实姓名</td>
+</tr>
+<tr>
+<td style="text-align: left;">shop_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>店铺id</td>
+</tr>
+<tr>
+<td style="text-align: left;">eavl</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>评论内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">star</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>评论星星</td>
+</tr>
+<tr>
+<td style="text-align: left;">order_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>订单id</td>
+</tr>
+<tr>
+<td style="text-align: left;">goods_name</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>商品名</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_img</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户头像</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>   {
+    &quot;code&quot;:200,
+    &quot;msg&quot;:&quot;成功&quot;
+   }
+
+   {
+    &quot;msg&quot;:&quot;您已评论过该订单！&quot;,
+    &quot;error_code&quot;:10000,
+    &quot;reqeust_url&quot;:&quot;\/api\/v1\/comment\/UserAddComment&quot;
+   }</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.4.19、普通用户获取自己评论</h3><div style="margin-left:30px;"><p>欢迎使用ShowDoc！</p>
+<p><strong>简要描述：</strong> </p>
+<ul>
+<li>普通用户获取自己评论</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/comment/GetUserComment</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code> {
+   &quot;code&quot;:200,
+   &quot;data&quot;:[
+   {
+   &quot;id&quot;:9,
+   &quot;shop_id&quot;:17,
+   &quot;order_id&quot;:5523,
+   &quot;goods_name&quot;:&quot;吃屎啦！！！！&quot;,
+   &quot;user_id&quot;:27,
+   &quot;true_name&quot;:&quot;NoName&quot;,
+   &quot;user_img&quot;:&quot;&quot;,
+   &quot;eavl&quot;:&quot;电影怒发帖&quot;,
+   &quot;time&quot;:1523456688,
+   &quot;star&quot;:3
+   },
+
+   {
+   &quot;id&quot;:10,
+   &quot;shop_id&quot;:17,
+   &quot;order_id&quot;:5524,
+   &quot;goods_name&quot;:&quot;吃屎啦！！！！&quot;,
+   &quot;user_id&quot;:27,
+   &quot;true_name&quot;:&quot;NoName&quot;,
+ &quot;user_img&quot;:&quot;https:\/\/wx.qlogo.cn\/mmopen\/vi_32\/yByWWFaiaDZ5NJJPqVfMC9PsxP3ha3Of4OczjNH2LicmqftmoNK4mnEQpiaxujRPCdEdqkZcB5VMcHgQUfhDeYT5Q\/0&quot;,
+   &quot;eavl&quot;:&quot;546544564&quot;,
+   &quot;time&quot;:1523456880,
+   &quot;star&quot;:3
+   }   
+    ]
+ }</code></pre></table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>6.4.20、获取普通用户某个状态下的所有订单</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取普通用户某个状态下的所有订单</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/v1/user/orderStatus</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token令牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">status</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>订单状态</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>有订单：
+[
+    {
+        &quot;id&quot;: 780,
+        &quot;order_id&quot;: &quot;1524239174598&quot;,
+        &quot;num&quot;: 2,
+        &quot;order_status&quot;: 3,
+        &quot;shop_id&quot;: 4,
+        &quot;shoper_id&quot;: 26,
+        &quot;user_id&quot;: 75,
+        &quot;product_id&quot;: 11,
+        &quot;service_fee&quot;: &quot;0.01&quot;,
+        &quot;is_business&quot;: 0,
+        &quot;updatetime&quot;: 1524239174,
+        &quot;o_builddate&quot;: 1524239174,
+        &quot;senddate&quot;: null,
+        &quot;o_address&quot;: &quot;北京市北京市东城区景兴&quot;,
+        &quot;o_phone&quot;: &quot;18819470586&quot;,
+        &quot;payway&quot;: null,
+        &quot;prepay_id&quot;: &quot;wx20234614298977a8c4e293571713173957&quot;,
+        &quot;note&quot;: &quot;&quot;,
+        &quot;products&quot;: {
+            &quot;id&quot;: 11,
+            &quot;shop_id&quot;: 4,
+            &quot;product_N&quot;: &quot;怡宝&quot;,
+            &quot;price&quot;: 66,
+            &quot;product_pic&quot;: &quot;https://www.dreamus.net/uploads/20180417/c65c16610a6262102440369f74c7367d.jpg&quot;,
+            &quot;product_info&quot;: &quot;怡宝矿泉水&quot;,
+            &quot;builddate&quot;: 1521216080,
+            &quot;updatatime&quot;: 1521216080
+        },
+        &quot;users&quot;: {
+            &quot;user_id&quot;: 75,
+            &quot;user_name&quot;: &quot;波波波波波&quot;,
+            &quot;user_phone&quot;: &quot;18819470586&quot;,
+            &quot;user_address&quot;: &quot;北京市北京市东城区&quot;,
+            &quot;user_address_detail&quot;: &quot;大通公园&quot;,
+            &quot;user_floor&quot;: 4,
+            &quot;user_iselevator&quot;: 0,
+            &quot;user_fre&quot;: 1,
+            &quot;business_fre&quot;: 1,
+            &quot;latitude&quot;: &quot;39.938574&quot;,
+            &quot;longitude&quot;: &quot;116.421885&quot;,
+            &quot;updatatime&quot;: &quot;2018-04-22 01:04:11&quot;,
+            &quot;is_business&quot;: 1,
+            &quot;id_pic&quot;: null,
+            &quot;id_pic_back&quot;: null,
+            &quot;license&quot;: null,
+            &quot;store_photo&quot;: null
+        },
+        &quot;shopers&quot;: {
+            &quot;sid&quot;: 26,
+            &quot;user_id&quot;: 76,
+            &quot;shop_id&quot;: 4,
+            &quot;name&quot;: null,
+            &quot;password&quot;: null,
+            &quot;realname&quot;: &quot;reclame&quot;,
+            &quot;mobile&quot;: &quot;13413174069&quot;,
+            &quot;id_pic&quot;: &quot;/uploads/20180421/e5c7248c2d3cb4e21df22dcf4a4ad6fd.png&quot;,
+            &quot;id_pic_back&quot;: &quot;/uploads/20180421/3e80b3d2cce635d7d34ae8001536c44d.png&quot;,
+            &quot;is_default&quot;: 0
+        },
+        &quot;shops&quot;: {
+            &quot;shop_id&quot;: 4,
+            &quot;user_id&quot;: 75,
+            &quot;shop_name&quot;: &quot;杨调调送水服务站（马鞍山公园）&quot;,
+            &quot;shop_phone&quot;: &quot;14353456457&quot;,
+            &quot;shop_HQ&quot;: &quot;广东省广州市花都区&quot;,
+            &quot;shop_address_detail&quot;: &quot;花都广场&quot;,
+            &quot;latitude&quot;: &quot;23.400480&quot;,
+            &quot;longitude&quot;: &quot;113.220190&quot;,
+            &quot;updatetime&quot;: &quot;2018-04-12 09:55:48&quot;,
+            &quot;shop_pic&quot;: &quot;https://www.dreamus.net/uploads/20180412/00fef9fe8b4f32522c020f1487054468.jpg&quot;,
+            &quot;id_pic_back&quot;: &quot;/public/upload//20180410/9d42ddd3c036ff7ef8f0ddf4503efbfa.jpg&quot;,
+            &quot;id_pic&quot;: &quot;/public/upload//20180410/257b8f509c48b3a7c261612fa7cef39f.jpg&quot;,
+            &quot;lience_pic&quot;: &quot;https://www.dreamus.net/public/upload//20180410/a067bd3d0d6db0d9e43be5eec92c25bf.jpg&quot;,
+            &quot;email&quot;: null,
+            &quot;registertime&quot;: &quot;2018-04-10 18:19:12&quot;,
+            &quot;is_check&quot;: 1,
+            &quot;is_pay&quot;: 1,
+            &quot;service_fee&quot;: &quot;0.01&quot;,
+            &quot;star&quot;: 3
+        }
+    }
+]
+没订单：
+   {
+    &quot;code&quot;: 1001,
+    &quot;msg&quot;: &quot;订单未找到&quot;,
+    &quot;data&quot;: {
+        &quot;reqeust_url&quot;: &quot;/api/v1/user/orderStatus&quot;
+    }
+}</code></pre></table></div></div></div></body></html>

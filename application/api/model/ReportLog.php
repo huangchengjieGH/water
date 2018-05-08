@@ -1,0 +1,1 @@
+<?phpnamespace app\api\model;use think\Model;// 反馈平台信息的模型（附近一公里无商家）class ReportLog extends Model{    public function findSame($lat,$lng){        $info = $this->where('latitude','=',$lat)            ->where('longitude','=',$lng)            ->find();        return $info;    }}

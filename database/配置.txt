@@ -1,0 +1,20 @@
+hostsµÿ÷∑£∫
+	C:\Windows\System32\drivers\etc
+
+127.0.0.1 water.com
+
+
+apache –Èƒ‚÷˜ª˙≈‰÷√
+<VirtualHost *:80> 
+    DocumentRoot "D:/xampp/htdocs/water/public" 
+    ServerName water.com 
+    ErrorLog "logs/water.log"
+    CustomLog "logs/water.log" common
+    <Directory "D:/xampp/htdocs/water"> 
+        Options Indexes FollowSymLinks
+        DirectoryIndex index.php
+        AllowOverride all
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>

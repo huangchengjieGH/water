@@ -1,0 +1,1 @@
+<?phpnamespace app\lib\exception;// 无效路由class MissException extends BaseException{    public $code = 404;    public $msg = '全局：你所请求的资源未找到';    public $errorCode = 1001;    //  10000 通用参数错误}
