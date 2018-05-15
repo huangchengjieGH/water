@@ -4,8 +4,8 @@ use think\Controller;
 use think\Db;
 
 class WithdrawService{
-    protected $SSLCERT_PATH = 'https://www.wjjcypt.cn/photo/apiclient_cert.pem';//证书路径
-    protected $SSLKEY_PATH = 'https://www.wjjcypt.cn/photo/apiclient_key.pem';//证书路径
+    protected $SSLCERT_PATH = '/webdata/photo/apiclient_cert.pem';//证书路径
+    protected $SSLKEY_PATH = '/webdata/photo/apiclient_key.pem';//证书路径
 
     public function withdraw($userId,$bankNo,$trueName ,$code,$money)
     {
