@@ -51,8 +51,8 @@ class WithdrawService{
 
         $publicKey = $return['pub_key'];
 //        return $publicKey;
-        $msg = encrypt_rsa('hcj',$publicKey);
-        return  $publicKey;
+        $msg = $this->encrypt_rsa('hcj',$publicKey);
+        return  $msg;
     }
     private function rsa($data){
 
