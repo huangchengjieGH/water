@@ -50,7 +50,7 @@ class WithdrawService{
         $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
 
         $publicKey = $return['pub_key'];
-//        return $publicKey;
+        return $publicKey;
         $msg = $this->encrypt_rsa('hcj',$publicKey);
         return  $msg;
     }
