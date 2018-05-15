@@ -28,7 +28,7 @@ class WithdrawService{
             $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
 
             if ($return['result_code'] == 'SUCCESS') {
-                $count = Income::changeUserIncomeStatus(101);
+                $count = Income::changeUserIncomeStatus($user_id);
                 if($count > 0){
                     return show(200, $return['err_code_des'], $return);
                 }else{
