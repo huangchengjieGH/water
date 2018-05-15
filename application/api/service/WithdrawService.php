@@ -11,7 +11,7 @@ class WithdrawService{
     public function withdraw($user_id,$bankNo,$trueName ,$code,$money)
     {
 
-        $count = Income::changeUserIncomeStatus($user_id);
+        $count = Income::changeUserIncomeStatus(101);
         if($count > 0) {
             $url = 'https://api.mch.weixin.qq.com/mmpaysptrans/pay_bank';
             $key = config('paySet.key');
