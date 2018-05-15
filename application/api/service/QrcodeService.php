@@ -8,8 +8,7 @@ class QrcodeService{
     {
         /*生成二维码*/
         //获取用户信息
-        $userId = 90;
-        $count = Qrcode::CheckUserQrcode(90);
+        $count = Qrcode::CheckUserQrcode($userId);
 //        $count = model('qrcode')->where(['ownerID'=>$userId])->count();
         if (!$count){
             vendor("phpqrcode.phpqrcode");
