@@ -10,9 +10,6 @@ class WithdrawService{
     protected $rsa_public_key = '/webdata/photo/rsa_public_key.pem';//公钥路径
     public function withdraw($user_id,$bankNo,$trueName ,$code,$money)
     {
-
-        $count = Income::changeUserIncomeStatus(101);
-        if($count > 0) {
             $url = 'https://api.mch.weixin.qq.com/mmpaysptrans/pay_bank';
             $key = config('paySet.key');
             $parameters = array(
@@ -31,17 +28,19 @@ class WithdrawService{
             $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
 
             if ($return['result_code'] == 'SUCCESS') {
-                return show(200, $return['err_code_des'], $return);
-
+                $count = Income::changeUserIncomeStatus(101);
+                if($count > 0){
+                    return show(200, $return['err_code_des'], $return);
+                }else{
+                    return show(201, '数据更新失败', $return);
+                }
 
             } else if ($return['result_code'] == 'FAIL') {
                 return show(201, $return['err_code_des'], $return);
             } else {
                 return $return;
             }
-        }else{
-            return show(201, '数据更新失败', $count);
-        }
+
     }
 
 
