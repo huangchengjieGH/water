@@ -24,7 +24,7 @@ class WithdrawService{
             );
             $parameters['sign'] = $this->getSign($parameters, $key);
 
-            return $parameters;
+//            return $parameters;
             $xmlData = $this->arrayToXml($parameters);
             $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
 
