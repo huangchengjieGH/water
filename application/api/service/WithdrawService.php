@@ -20,6 +20,7 @@ class WithdrawService{
         $partner_trade_no = $this->createNoncestr();
 
 //        $WithdrawRequest = new WithdrawRequestService($mch_id, $partner_trade_no,$nonce_str,$enc_bank_no,$enc_true_name,$bank_code,$amount,$desc);
+        $key = config('paySet.key');
         $parameters = array(
             'mch_id' => config('paySet.mch_id'),
             'amount' => $money,
@@ -30,7 +31,7 @@ class WithdrawService{
 //            'desc' => new String("abc".getBytes("UTF-8")),
             'partner_trade_no' => $this->createNoncestr(),
         );
-        $parameters['sign'] = $this->getSign($parameters);
+        $parameters['sign'] = $this->getSign($parameters,$key);
 
         return $parameters;
 
