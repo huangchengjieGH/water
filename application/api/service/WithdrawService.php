@@ -20,6 +20,7 @@ class WithdrawService{
         $partner_trade_no = $this->createNoncestr();
 
 //        $WithdrawRequest = new WithdrawRequestService($mch_id, $partner_trade_no,$nonce_str,$enc_bank_no,$enc_true_name,$bank_code,$amount,$desc);
+        $url = 'https://api.mch.weixin.qq.com/mmpaysptrans/pay_bank';
         $key = config('paySet.key');
         $parameters = array(
             'mch_id' => config('paySet.mch_id'),
@@ -33,8 +34,10 @@ class WithdrawService{
         );
         $parameters['sign'] = $this->getSign($parameters,$key);
 
-        return $parameters;
 
+        $xmlData = $this->arrayToXml($parameters);
+        $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
+        return $return;
     }
 
 
