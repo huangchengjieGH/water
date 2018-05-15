@@ -38,9 +38,9 @@ class WithdrawService{
         $xmlData = $this->arrayToXml($parameters);
         $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
         if($return['result_code'] == 'SUCCESS'){
-            return show(200,$return['err_code_des']);
+            return show(200,$return['err_code_des'],$return);
         }else if($return['result_code'] == 'FAIL'){
-            return show(201,$return['err_code_des']);
+            return show(201,$return['err_code_des'],$return);
         }else{
             return $return;
         }
