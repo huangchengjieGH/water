@@ -62,7 +62,7 @@ class WithdrawService{
         $encode_data = '';
         $split = str_split($data, 100);// 1024bit && OPENSSL_PKCS1_PADDING  不大于117即可
         foreach ($split as $part) {
-            $isOkay = openssl_public_encrypt($part, $en_data, $pu_key);
+            $isOkay = openssl_public_encrypt($part, $en_data, $pu_key,OPENSSL_PKCS1_OAEP_PADDING);
             if(!$isOkay){
                 return false;
             }
