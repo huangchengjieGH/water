@@ -55,10 +55,10 @@ class WithdrawService{
 
         $pu_key = openssl_pkey_get_public(file_get_contents($this->rsa_public_key));
         $msg = $this->encrypt_rsa($data,$pu_key);
-        if($msg -> result_code == 'SUCCESS'){
-            return show(200,"微信侧受理成功");
-        }else if($msg -> result_code == 'FAIL'){
-            return show(201,"提现失败");
+        if($msg['result_code'] == 'SUCCESS'){
+            return show(200,$msg['err_code_des']);
+        }else if($msg['result_code'] == 'FAIL'){
+            return show(201,$msg['err_code_des']);
         }else{
             return $msg;
         }
