@@ -19,8 +19,8 @@
       <file leaf-file-name="WithdrawService.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/api/service/WithdrawService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+            <state relative-caret-position="347">
+              <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
               <folding>
                 <element signature="e#33#54#0#PHP" expanded="true" />
               </folding>
@@ -42,6 +42,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="347">
               <caret line="140" column="9" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Shop.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Shop.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="398" lean-forward="true" selection-start-line="398" selection-end-line="398" />
+              <folding>
+                <element signature="e#41#79#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,10 +109,10 @@
       <find>https://fraud.mch.weixin.qq.com/risk/getpublickey</find>
       <find>\;\n    \}\n    private function rsa\(\$data\)\{\n\n    \}\n\n    \/\/统一提现接口\n    private function unifiedorder\(\) \{\n        \$url \= \'https\:\/\/api\.mch\.weixin\.qq\.com\/pay\/unifiedorder\'\;\n        \$parameters \= array\(\n            \'appid\' \=\&gt; \$this\-\&gt;appid\, \/\/小程序ID\n            \'mch_id\' \=\&gt; \$this\-\&gt;mch_id\, \/\/商户号\n            \'nonce_str\' \=\&gt; \$this\-\&gt;createNoncestr\(\)\, \/\/随机字符串\n\/\/            \'body\' \=\&gt; \'test\'\, \/\/商品</find>
       <find>encrypt</find>
-      <find>postXmlSSLCurl</find>
       <find>SSLCERT_PATH</find>
       <find>openssl_public_encrypt</find>
       <find>simplexml_load_string</find>
+      <find>postXmlSSLCurl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -286,12 +298,12 @@
       <option name="presentableId" value="Default" />
       <updated>1525781882811</updated>
       <workItem from="1525781885183" duration="16692000" />
-      <workItem from="1525859018411" duration="77434000" />
+      <workItem from="1525859018411" duration="77636000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94126000" />
+    <option name="totallyTimeSpent" value="94328000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="218" y="62" width="1502" height="948" extended-state="0" />
@@ -488,16 +500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Shop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="322" column="39" lean-forward="true" selection-start-line="322" selection-start-column="39" selection-end-line="322" selection-end-column="39" />
-          <folding>
-            <element signature="e#41#79#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Location.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -679,10 +681,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Shop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="398" lean-forward="true" selection-start-line="398" selection-end-line="398" />
+          <folding>
+            <element signature="e#41#79#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/api/service/WithdrawService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+        <state relative-caret-position="347">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
           <folding>
             <element signature="e#33#54#0#PHP" expanded="true" />
           </folding>
