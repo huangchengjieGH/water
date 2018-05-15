@@ -34,7 +34,7 @@ class WithdrawService{
         );
         $parameters['sign'] = $this->getSign($parameters,$key);
 
-        return $parameters;
+//        return $parameters;
         $xmlData = $this->arrayToXml($parameters);
         $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
         return $return;
@@ -51,14 +51,11 @@ class WithdrawService{
         );
         $parameters['sign'] = $this->getSign($parameters,$key);
          $xmlData = $this->arrayToXml($parameters);
-//        $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));  //生成共钥，需要转成PKCS#8
+//        $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));  //生成公钥，需要转成PKCS#8
 
         $pu_key = openssl_pkey_get_public(file_get_contents($this->rsa_public_key));
         $msg = $this->encrypt_rsa($data,$pu_key);
         return  $msg;
-    }
-    private function rsa($data){
-
     }
 
     public function encrypt_rsa($data, $pu_key){
