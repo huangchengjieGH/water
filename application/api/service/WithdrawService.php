@@ -48,15 +48,12 @@ class WithdrawService{
          $xmlData = $this->arrayToXml($parameters);
 //         $test = $this->postXmlSSLCurl($xmlData, $url, 60);
         $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
-//        return "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAwqkhiUlqSn\/mQ41BdyzPXa72wx\/u\/RAc3tymYLYMnEIINF4+qgCN\nq516e8lzUJaO+ksOc3fRXCLFb6PsC4bEH6nXQngXAstOUpSVOUTezjgtcPAedSr\/\niL94EbR3ypteZSDJXZaJMmY7JFkCatMWHYv0OOa9rqv3hZQ6Am0Oqp35Q99xyhET\nVn1LvhV+AoNPMiGuBvT9xmUdS82cWt0XDcYLNdjh3GYfK6PPe2yVHG62qZWLQ9lo\nK+wlxbuZGN5EVuOS+LfGBbiyfhlRc7Oq+QMzIi0u6kj0QLViPW87xqIdkRgZgrHf\n\/Lgp73ksk9DY1eiU+5KqjG6m1EFXhcJxqwIDAQAB\n-----END RSA PUBLIC KEY-----\n";
-//        $publicKey = $return['pub_key'];
-//        return $return['pub_key'];
+
         $pu_key = openssl_pkey_get_public(file_get_contents($this->rsa_public_key));
-         return $pu_key;
+//         return $pu_key;
 //        $publicKey = 'MIIBCgKCAQEAwqkhiUlqSn\/mQ41BdyzPXa72wx\/u\/RAc3tymYLYMnEIINF4+qgCN\nq516e8lzUJaO+ksOc3fRXCLFb6PsC4bEH6nXQngXAstOUpSVOUTezjgtcPAedSr\/\niL94EbR3ypteZSDJXZaJMmY7JFkCatMWHYv0OOa9rqv3hZQ6Am0Oqp35Q99xyhET\nVn1LvhV+AoNPMiGuBvT9xmUdS82cWt0XDcYLNdjh3GYfK6PPe2yVHG62qZWLQ9lo\nK+wlxbuZGN5EVuOS+LfGBbiyfhlRc7Oq+QMzIi0u6kj0QLViPW87xqIdkRgZgrHf\n\/Lgp73ksk9DY1eiU+5KqjG6m1EFXhcJxqwIDAQAB';
 //        return $publicKey;
         $msg = $this->encrypt_rsa('hcj',$pu_key);
-        file_get_contents();
         return  $msg;
     }
     private function rsa($data){
