@@ -62,6 +62,8 @@ class WithdrawService{
 
         $pu_key = openssl_pkey_get_public(file_get_contents($this->rsa_public_key));
         $msg = $this->encrypt_rsa($data,$pu_key);
+        return $msg;
+
     }
 
     public function encrypt_rsa($data, $pu_key){
