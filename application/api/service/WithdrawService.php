@@ -46,9 +46,9 @@ class WithdrawService{
         );
         $parameters['sign'] = $this->getSign($parameters,$key);
          $xmlData = $this->arrayToXml($parameters);
-         $test = $this->postXmlSSLCurl($xmlData, $url, 60);
-//        $return = $this->xmlToArray($this->postXmlCurl($xmlData, $url, 60));
-        return $test;
+//         $test = $this->postXmlSSLCurl($xmlData, $url, 60);
+        $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
+        return $return;
     }
     private function rsa($data){
 
