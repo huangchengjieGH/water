@@ -48,12 +48,28 @@ class WithdrawService{
          $xmlData = $this->arrayToXml($parameters);
 //         $test = $this->postXmlSSLCurl($xmlData, $url, 60);
         $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
-        return $return;
+
+        $publicKey = $return -> pub_key;
+//        return $publicKey;
+        $msg = encrypt_rsa('hcj',$publicKey);
+        return  $msg;
     }
     private function rsa($data){
 
     }
 
+    public function encrypt_rsa($data, $pu_key){
+        $split = str_split($data, 100);// 1024bit && OPENSSL_PKCS1_PADDING  不大于117即可
+        foreach ($split as $part) {
+            $isOkay = openssl_public_encrypt($part, $en_data, $pu_key);
+            if(!$isOkay){
+                return false;
+            }
+            // echo strlen($en_data),'<br/>';
+            $encode_data .= base64_encode($en_data);
+        }
+        return $encode_data;
+    }
     //统一提现接口
     private function unifiedorder() {
         $url = 'https://api.mch.weixin.qq.com/pay/unifiedorder';
