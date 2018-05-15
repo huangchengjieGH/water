@@ -16,10 +16,10 @@ class WithdrawService{
         $bank_code = $code;
         $enc_bank_no = $bankNo;  //加密
         $enc_true_name = $trueName; //加密
-        $desc = new String("abc".getBytes("UTF-8"));
+//        $desc = new String("abc".getBytes("UTF-8"));
         $partner_trade_no = $this->createNoncestr();
 
-        $WithdrawRequest = new WithdrawRequestService($mch_id, $partner_trade_no,$nonce_str,$enc_bank_no,$enc_true_name,$bank_code,$amount,$desc);
+//        $WithdrawRequest = new WithdrawRequestService($mch_id, $partner_trade_no,$nonce_str,$enc_bank_no,$enc_true_name,$bank_code,$amount,$desc);
         $parameters = array(
             'mch_id' => config('paySet.mch_id'),
             'amount' => $money,
@@ -27,7 +27,7 @@ class WithdrawService{
             'bank_code'=> $code,
             'enc_bank_no' => $this->getpublickey($bankNo),
             'enc_true_name' => $this->getpublickey($trueName),
-            'desc' => new String("abc".getBytes("UTF-8")),
+//            'desc' => new String("abc".getBytes("UTF-8")),
             'partner_trade_no' => $this->createNoncestr(),
         );
         $parameters['sign'] = $this->getSign($parameters);
