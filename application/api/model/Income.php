@@ -27,7 +27,7 @@ class Income extends Model{
     public static function changeUserIncomeStatus($user_id){
 //        $sql = "select count(*) as count from sbw_relation  where originId in (select customerId from sbw_income where enjoyId = {$user_id})";
 //        $count = Db::query($sql);
-        $count = Db::table('Income')->where('enjoyId', $user_id)->update(['status' => 0]);
+        $count = Db::table('sbw_income')->where('enjoyId', $user_id)->update(['status' => 0]);
         return $count;
 
     }
