@@ -11,9 +11,10 @@ class Withdraw extends BaseController{
     public function Withdraw(){
         //获取用户信息
 //        $data = $this->getUid();
-//        $post = input('post.');
+//        $bankNo,$trueName ,$code,$money
+        $post = input('post.');
         $WithdrawService = new WithdrawService();
-        $msg = $WithdrawService->getpublickey();
+        $msg = $WithdrawService->withdraw($post['bankNo'],$post['trueName'],$post['code'],$post['money']);
         return $msg;
     }
 }

@@ -7,7 +7,7 @@ class WithdrawService{
     protected $SSLCERT_PATH = '/webdata/photo/apiclient_cert.pem';//证书路径
     protected $SSLKEY_PATH = '/webdata/photo/apiclient_key.pem';//证书路径
     protected $rsa_public_key = '/webdata/photo/rsa_public_key.pem';//证书路径
-    public function withdraw($userId,$bankNo,$trueName ,$code,$money)
+    public function withdraw($bankNo,$trueName ,$code,$money)
     {
 
         $mch_id = config('paySet.mch_id');
@@ -25,18 +25,19 @@ class WithdrawService{
             'amount' => $money,
             'nonce_str' => $this->createNoncestr(),
             'bank_code'=> $code,
-            'enc_bank_no' => $bankNo,
-            'enc_true_name' => $trueName,
+            'enc_bank_no' => $this->getpublickey($bankNo),
+            'enc_true_name' => $this->getpublickey($trueName),
             'desc' => new String("abc".getBytes("UTF-8")),
             'partner_trade_no' => $this->createNoncestr(),
         );
         $parameters['sign'] = $this->getSign($parameters);
 
+        return $parameters;
 
     }
 
 
-    public function getpublickey(){
+    public function getpublickey($data){
         $url = 'https://fraud.mch.weixin.qq.com/risk/getpublickey';
         $key = config('paySet.key');
         $parameters = array(
@@ -46,14 +47,10 @@ class WithdrawService{
         );
         $parameters['sign'] = $this->getSign($parameters,$key);
          $xmlData = $this->arrayToXml($parameters);
-//         $test = $this->postXmlSSLCurl($xmlData, $url, 60);
-        $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
+//        $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));  //生成共钥，需要转成PKCS#8
 
         $pu_key = openssl_pkey_get_public(file_get_contents($this->rsa_public_key));
-//         return $pu_key;
-//        $publicKey = 'MIIBCgKCAQEAwqkhiUlqSn\/mQ41BdyzPXa72wx\/u\/RAc3tymYLYMnEIINF4+qgCN\nq516e8lzUJaO+ksOc3fRXCLFb6PsC4bEH6nXQngXAstOUpSVOUTezjgtcPAedSr\/\niL94EbR3ypteZSDJXZaJMmY7JFkCatMWHYv0OOa9rqv3hZQ6Am0Oqp35Q99xyhET\nVn1LvhV+AoNPMiGuBvT9xmUdS82cWt0XDcYLNdjh3GYfK6PPe2yVHG62qZWLQ9lo\nK+wlxbuZGN5EVuOS+LfGBbiyfhlRc7Oq+QMzIi0u6kj0QLViPW87xqIdkRgZgrHf\n\/Lgp73ksk9DY1eiU+5KqjG6m1EFXhcJxqwIDAQAB';
-//        return $publicKey;
-        $msg = $this->encrypt_rsa('hcj',$pu_key);
+        $msg = $this->encrypt_rsa($data,$pu_key);
         return  $msg;
     }
     private function rsa($data){
