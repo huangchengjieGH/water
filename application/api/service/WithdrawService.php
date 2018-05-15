@@ -11,34 +11,37 @@ class WithdrawService{
     public function withdraw($user_id,$bankNo,$trueName ,$code,$money)
     {
 
-        $url = 'https://api.mch.weixin.qq.com/mmpaysptrans/pay_bank';
-        $key = config('paySet.key');
-        $parameters = array(
-            'mch_id' => config('paySet.mch_id'),
-            'amount' => $money,
-            'nonce_str' => $this->createNoncestr(),
-            'bank_code'=> $code,
-            'enc_bank_no' => $this->getpublickey($bankNo),
-            'enc_true_name' => $this->getpublickey($trueName),
+        $count = Income::changeUserIncomeStatus($user_id);
+        if($count > 0) {
+            $url = 'https://api.mch.weixin.qq.com/mmpaysptrans/pay_bank';
+            $key = config('paySet.key');
+            $parameters = array(
+                'mch_id' => config('paySet.mch_id'),
+                'amount' => $money,
+                'nonce_str' => $this->createNoncestr(),
+                'bank_code' => $code,
+                'enc_bank_no' => $this->getpublickey($bankNo),
+                'enc_true_name' => $this->getpublickey($trueName),
 //            'desc' => new String("abc".getBytes("UTF-8")),
-            'partner_trade_no' => $this->createNoncestr(),
-        );
-        $parameters['sign'] = $this->getSign($parameters,$key);
+                'partner_trade_no' => $this->createNoncestr(),
+            );
+            $parameters['sign'] = $this->getSign($parameters, $key);
 
-        $xmlData = $this->arrayToXml($parameters);
-        $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
+            $xmlData = $this->arrayToXml($parameters);
+            $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
 
-        $count = Income::changeUserIncomeStatus(101);
-        return $count;
+            if ($return['result_code'] == 'SUCCESS') {
+                return show(200, $return['err_code_des'], $return);
 
-        if($return['result_code'] == 'SUCCESS'){
-            return show(200,$return['err_code_des'],$return);
-        }else if($return['result_code'] == 'FAIL'){
-            return show(201,$return['err_code_des'],$return);
+
+            } else if ($return['result_code'] == 'FAIL') {
+                return show(201, $return['err_code_des'], $return);
+            } else {
+                return $return;
+            }
         }else{
-            return $return;
+            return show(201, '数据更新失败', $count);
         }
-
     }
 
 
