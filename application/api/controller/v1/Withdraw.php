@@ -15,7 +15,7 @@ class Withdraw extends BaseController{
         $post = input('post.');
         $WithdrawService = new WithdrawService();
 
-        echo $post['bankNo'];
+//        echo $post['bankNo'];
         echo $post['trueName'];
         echo $post['code'];
         echo $post['money'];
