@@ -1,25 +1,16 @@
 <?php
 namespace app\api\service;
+use app\api\model\Income;
 use think\Controller;
 use think\Db;
 
 class WithdrawService{
     protected $SSLCERT_PATH = '/webdata/photo/apiclient_cert.pem';//证书路径
     protected $SSLKEY_PATH = '/webdata/photo/apiclient_key.pem';//证书路径
-    protected $rsa_public_key = '/webdata/photo/rsa_public_key.pem';//证书路径
-    public function withdraw($bankNo,$trueName ,$code,$money)
+    protected $rsa_public_key = '/webdata/photo/rsa_public_key.pem';//公钥路径
+    public function withdraw($user_id,$bankNo,$trueName ,$code,$money)
     {
 
-        $mch_id = config('paySet.mch_id');
-        $amount = $money;
-        $nonce_str = $this->createNoncestr();
-        $bank_code = $code;
-        $enc_bank_no = $bankNo;  //加密
-        $enc_true_name = $trueName; //加密
-//        $desc = new String("abc".getBytes("UTF-8"));
-        $partner_trade_no = $this->createNoncestr();
-
-//        $WithdrawRequest = new WithdrawRequestService($mch_id, $partner_trade_no,$nonce_str,$enc_bank_no,$enc_true_name,$bank_code,$amount,$desc);
         $url = 'https://api.mch.weixin.qq.com/mmpaysptrans/pay_bank';
         $key = config('paySet.key');
         $parameters = array(
@@ -34,9 +25,10 @@ class WithdrawService{
         );
         $parameters['sign'] = $this->getSign($parameters,$key);
 
-//        return $parameters;
         $xmlData = $this->arrayToXml($parameters);
         $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
+
+        $count = Income::changeUserIncomeStatus(101);
         if($return['result_code'] == 'SUCCESS'){
             return show(200,$return['err_code_des'],$return);
         }else if($return['result_code'] == 'FAIL'){
