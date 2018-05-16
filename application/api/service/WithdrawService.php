@@ -14,7 +14,7 @@ class WithdrawService{
             $key = config('paySet.key');
             $parameters = array(
                 'mch_id' => config('paySet.mch_id'),
-                'amount' => $money,
+                'amount' => $money * 100,
                 'nonce_str' => $this->createNoncestr(),
                 'bank_code' => $code,
                 'enc_bank_no' => $this->getpublickey($bankNo),
