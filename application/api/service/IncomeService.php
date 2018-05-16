@@ -48,7 +48,7 @@ class IncomeService{
                 $dataList[] = array('orderId'=>$orderId,'enjoyId'=>$levelOne -> originId,'level'=> '1','income'=>$commissionOne->income,'builddate'=>time());
                 $dataList[] = array('orderId'=>$orderId,'enjoyId'=>$levelTwo -> originId,'level'=> '2','income'=>$commissionTwo->income,'builddate'=>time());
             }else{
-                $dataList[] = array('orderId'=>$orderId,'enjoyId'=>$levelOne -> originId,'level'=> '1','income'=>$commissionOne->commission,'builddate'=>time());
+                $dataList[] = array('orderId'=>$orderId,'enjoyId'=>$levelOne -> originId,'level'=> '1','income'=>$commissionOne->income,'builddate'=>time());
             }
             $insertOkInfo = db('Income')->insertAll($dataList);
         }else{
