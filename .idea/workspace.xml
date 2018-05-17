@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8de7354a-6274-438b-8929-93f4d7cb4f3b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/application/api/service/UserToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/service/UserToken.php" afterDir="false" />
-    </list>
+    <list default="true" id="8de7354a-6274-438b-8929-93f4d7cb4f3b" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -332,12 +330,12 @@
       <option name="presentableId" value="Default" />
       <updated>1525781882811</updated>
       <workItem from="1525781885183" duration="16692000" />
-      <workItem from="1525859018411" duration="119424000" />
+      <workItem from="1525859018411" duration="119564000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136116000" />
+    <option name="totallyTimeSpent" value="136256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="80" y="23" width="1502" height="948" extended-state="0" />
