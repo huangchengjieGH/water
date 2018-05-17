@@ -40,7 +40,7 @@ class QrcodeService{
 
     }
 
-    public function generateQrcode()
+    public function generateQrcode($userId)
     {
         /*生成二维码*/
         //获取用户信息

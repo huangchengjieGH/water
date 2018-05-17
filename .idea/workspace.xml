@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8de7354a-6274-438b-8929-93f4d7cb4f3b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/application/api/controller/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/controller/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/api/controller/v1/Qrcode.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/controller/v1/Qrcode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/api/validate/BaseValidate.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/validate/BaseValidate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/service/QrcodeService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/service/QrcodeService.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Qrcode.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="227">
-              <caret line="22" column="62" lean-forward="true" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
               <folding>
                 <element signature="e#42#80#0#PHP" expanded="true" />
               </folding>
@@ -90,8 +88,8 @@
       <file leaf-file-name="QrcodeService.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/api/service/QrcodeService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="47" column="2" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
+            <state relative-caret-position="267">
+              <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -186,12 +184,12 @@
         <option value="$PROJECT_DIR$/application/api/controller/v1/Distribution.php" />
         <option value="$PROJECT_DIR$/application/api/service/IncomeService.php" />
         <option value="$PROJECT_DIR$/application/api/model/Qrcode.php" />
-        <option value="$PROJECT_DIR$/application/api/service/QrcodeService.php" />
         <option value="$PROJECT_DIR$/application/route.php" />
         <option value="$PROJECT_DIR$/application/api/controller/v1/Test.php" />
         <option value="$PROJECT_DIR$/application/api/validate/BaseValidate.php" />
         <option value="$PROJECT_DIR$/application/api/controller/BaseController.php" />
         <option value="$PROJECT_DIR$/application/api/controller/v1/Qrcode.php" />
+        <option value="$PROJECT_DIR$/application/api/service/QrcodeService.php" />
       </list>
     </option>
   </component>
@@ -342,12 +340,12 @@
       <option name="presentableId" value="Default" />
       <updated>1525781882811</updated>
       <workItem from="1525781885183" duration="16692000" />
-      <workItem from="1525859018411" duration="112242000" />
+      <workItem from="1525859018411" duration="112336000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128934000" />
+    <option name="totallyTimeSpent" value="129028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="80" y="23" width="1502" height="948" extended-state="0" />
@@ -710,13 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/api/service/QrcodeService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="47" column="2" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -752,10 +743,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/service/QrcodeService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Qrcode.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
-          <caret line="22" column="62" lean-forward="true" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding>
             <element signature="e#42#80#0#PHP" expanded="true" />
           </folding>
