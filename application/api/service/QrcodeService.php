@@ -76,7 +76,7 @@ class QrcodeService{
             }
         }else {
             $data = Qrcode::findUserQrcode($userId);
-            return show(202, '已经是经销商', $data);
+            return $data->url;
         }
 
     }
