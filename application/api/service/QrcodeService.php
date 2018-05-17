@@ -76,7 +76,7 @@ class QrcodeService{
             }
         }else {
             $data = Qrcode::findUserQrcode($userId);
-            return $data->url;
+            echo $data->url;
         }
 
     }

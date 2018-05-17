@@ -89,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/application/api/service/QrcodeService.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="600">
-              <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+              <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -340,12 +340,12 @@
       <option name="presentableId" value="Default" />
       <updated>1525781882811</updated>
       <workItem from="1525781885183" duration="16692000" />
-      <workItem from="1525859018411" duration="112985000" />
+      <workItem from="1525859018411" duration="113466000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129677000" />
+    <option name="totallyTimeSpent" value="130158000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="80" y="23" width="1502" height="948" extended-state="0" />
@@ -756,7 +756,7 @@
     <entry file="file://$PROJECT_DIR$/application/api/service/QrcodeService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
-          <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+          <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
         </state>
       </provider>
     </entry>
