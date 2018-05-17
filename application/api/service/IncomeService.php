@@ -4,6 +4,7 @@ namespace app\api\service;
 use app\api\model\Income;
 use app\api\model\Relation;
 use app\api\model\Districommission;
+use app\api\model\Order;
 class IncomeService{
 
     public function calculateIncome($userId,$orderId)
@@ -15,12 +16,16 @@ class IncomeService{
         $commissionOne = Districommission::findCommissionByLevel(Districommission::$levelOne);
         $commissionTwo = Districommission::findCommissionByLevel(Districommission::$levelTwo);
 
+        $order = Order::getPayOrder($orderId);
+        $incomeOne = $commissionOne->commission * $order->num;
+        $incomeTwo = $commissionTwo->commission * $order->num;
         if($levelOne != null){
             if($levelTwo != null){
-                $dataList[] = array('orderId'=>$orderId,'enjoyId'=>$levelOne -> originId,'level'=> '1','income'=>$commissionOne->commission,'builddate'=>time());
-                $dataList[] = array('orderId'=>$orderId,'enjoyId'=>$levelTwo -> originId,'level'=> '2','income'=>$commissionTwo->commission,'builddate'=>time());
+
+                $dataList[] = array('orderId'=>$orderId,'enjoyId'=>$levelOne -> originId,'level'=> '1','income'=>$incomeOne,'builddate'=>time());
+                $dataList[] = array('orderId'=>$orderId,'enjoyId'=>$levelTwo -> originId,'level'=> '2','income'=>$incomeTwo->commission,'builddate'=>time());
             }else{
-                $dataList[] = array('orderId'=>$orderId,'enjoyId'=>$levelOne -> originId,'level'=> '1','income'=>$commissionOne->commission,'builddate'=>time());
+                $dataList[] = array('orderId'=>$orderId,'enjoyId'=>$levelOne -> originId,'level'=> '1','income'=>$incomeOne,'builddate'=>time());
             }
             $insertOkInfo = db('Income')->insertAll($dataList);
         }else{

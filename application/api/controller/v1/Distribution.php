@@ -13,6 +13,7 @@ class Distribution extends BaseController
         $post = input('post.');
         $IncomeService = new IncomeService();
         $msg = $IncomeService->calculateIncome($data->user_id,$post['orderId']);
+//        $msg = $IncomeService->calculateIncome('253',$post['orderId']);
         return $msg;
     }
 
