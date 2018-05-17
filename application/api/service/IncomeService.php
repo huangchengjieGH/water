@@ -23,7 +23,7 @@ class IncomeService{
             if($levelTwo != null){
 
                 $dataList[] = array('orderId'=>$orderId,'enjoyId'=>$levelOne -> originId,'level'=> '1','income'=>$incomeOne,'builddate'=>time());
-                $dataList[] = array('orderId'=>$orderId,'enjoyId'=>$levelTwo -> originId,'level'=> '2','income'=>$incomeTwo->commission,'builddate'=>time());
+                $dataList[] = array('orderId'=>$orderId,'enjoyId'=>$levelTwo -> originId,'level'=> '2','income'=>$incomeTwo,'builddate'=>time());
             }else{
                 $dataList[] = array('orderId'=>$orderId,'enjoyId'=>$levelOne -> originId,'level'=> '1','income'=>$incomeOne,'builddate'=>time());
             }
