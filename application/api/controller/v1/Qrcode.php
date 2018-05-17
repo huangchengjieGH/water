@@ -18,7 +18,7 @@ class Qrcode extends BaseController
     }
     public function generateQrcode(){
         //获取用户信息
-        $data = $this->getUid();
+        $data = $this->getUidByget();
         $QrcodeService = new QrcodeService();
         $msg = $QrcodeService->generateQrcode($data->user_id);
         return $msg;
