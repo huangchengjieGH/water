@@ -45,25 +45,24 @@ class QrcodeService{
         /*生成二维码*/
         //获取用户信息
         $count = Qrcode::CheckUserQrcode($userId);
+//        $userId = 253;
 //        $userId = 113;
 //        $count = 0;
+
+        vendor("phpqrcode.phpqrcode");
+        $data = 'http://cilong.wjjcypt.cn/qrcode?userId='.$userId;
+        $level = 'L';// 纠错级别：L、M、Q、H
+        $size = 4;// 点的大小：1到10,用于手机端4就可以了
+        $QRcode = new \QRcode();
+        ob_start();
+        $QRcode->png($data, false, $level, $size, 2);
+        $imageString = base64_encode(ob_get_contents());
+        ob_end_clean();
         if (!$count){
-            vendor("phpqrcode.phpqrcode");
-            $data = 'http://cilong.wjjcypt.cn/qrcode?userId='.$userId;
-            $level = 'L';// 纠错级别：L、M、Q、H
-            $size = 4;// 点的大小：1到10,用于手机端4就可以了
-            $QRcode = new \QRcode();
-            ob_start();
-            $QRcode->png($data, false, $level, $size, 2);
-            $imageString = base64_encode(ob_get_contents());
-            ob_end_clean();
-
 //            return show(202, '已经是经销商', $test);
-
             $save_data['ownerID'] = $userId;
             $save_data['url'] = "data:image/jpg;base64," . $imageString;
             $save_data['builddate'] = time();
-
             model('Qrcode')->startTrans();
             $res = model('Qrcode')->save($save_data);
             if ($res) {
@@ -75,8 +74,9 @@ class QrcodeService{
                 return show(201, '生成二维码失败', $save_data);
             }
         }else {
-            $data = Qrcode::findUserQrcode($userId);
-            echo $data->url;
+//            $data = Qrcode::findUserQrcode($userId);
+            $QRcode::png($data, false, $level, $size);
+//            echo $data->url;
         }
 
     }
