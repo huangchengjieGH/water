@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8de7354a-6274-438b-8929-93f4d7cb4f3b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/api/service/QrcodeService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/service/QrcodeService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/database.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +19,17 @@
       <file leaf-file-name="route.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/route.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="19" column="33" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="33" />
+            <state relative-caret-position="257">
+              <caret line="96" column="92" selection-start-line="96" selection-start-column="76" selection-end-line="96" selection-end-column="92" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserMessage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/api/controller/v1/UserMessage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="601">
+              <caret line="595" column="38" selection-start-line="595" selection-start-column="33" selection-end-line="595" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -35,26 +43,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Order.php">
+      <file leaf-file-name="Qrcode.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Qrcode.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2217">
-              <caret line="606" column="49" lean-forward="true" selection-start-line="606" selection-start-column="49" selection-end-line="606" selection-end-column="49" />
+            <state relative-caret-position="227">
+              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
               <folding>
-                <element signature="e#156#194#0#PHP" expanded="true" />
+                <element signature="e#42#80#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Qrcode.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Qrcode.php">
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="34" column="16" lean-forward="true" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-              <folding>
-                <element signature="e#42#80#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="315">
+              <caret line="29" column="33" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -89,8 +94,8 @@
       <file leaf-file-name="QrcodeService.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/api/service/QrcodeService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="62" column="43" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="43" />
+            <state relative-caret-position="227">
+              <caret line="46" column="48" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -104,24 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DistrictService.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/api/service/DistrictService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="23" />
-              <folding>
-                <element signature="e#33#56#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mch_id</find>
-      <find>$mch_id</find>
       <find>1337683501</find>
       <find>rsa</find>
       <find>pay</find>
@@ -150,6 +141,8 @@
       <find>calculateIncome</find>
       <find>for</find>
       <find>Shopers</find>
+      <find>user/getExamineAndFre</find>
+      <find>getExamineAndFre</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,7 +152,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/application/api/model/Order.php" />
-        <option value="$PROJECT_DIR$/application/database.php" />
         <option value="$PROJECT_DIR$/application/api/model/Shop.php" />
         <option value="$PROJECT_DIR$/route.php" />
         <option value="$PROJECT_DIR$/application/api/service/Qrcode.php" />
@@ -191,6 +183,7 @@
         <option value="$PROJECT_DIR$/application/api/controller/BaseController.php" />
         <option value="$PROJECT_DIR$/application/api/service/QrcodeService.php" />
         <option value="$PROJECT_DIR$/application/api/controller/v1/Qrcode.php" />
+        <option value="$PROJECT_DIR$/application/database.php" />
       </list>
     </option>
   </component>
@@ -297,17 +290,6 @@
               <item name="library" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="waters" type="b2602c69:ProjectViewProjectNode" />
-              <item name="waters" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="waters" type="b2602c69:ProjectViewProjectNode" />
-              <item name="waters" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phpqrcode" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -341,12 +323,12 @@
       <option name="presentableId" value="Default" />
       <updated>1525781882811</updated>
       <workItem from="1525781885183" duration="16692000" />
-      <workItem from="1525859018411" duration="115083000" />
+      <workItem from="1525859018411" duration="115798000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131775000" />
+    <option name="totallyTimeSpent" value="132490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="80" y="23" width="1502" height="948" extended-state="0" />
@@ -555,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/api/controller/v1/UserMessage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="118" column="8" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Withdraw.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -602,13 +577,6 @@
     <entry file="file://$PROJECT_DIR$/route.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1134" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="37" column="14" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="14" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/api/model/Relation.php">
@@ -709,13 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thinkphp/library/think/Request.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -744,20 +705,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/api/service/QrcodeService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="62" column="43" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Qrcode.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="34" column="16" lean-forward="true" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+        <state relative-caret-position="227">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding>
             <element signature="e#42#80#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/service/QrcodeService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="46" column="48" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="96" column="92" selection-start-line="96" selection-start-column="76" selection-end-line="96" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/controller/v1/UserMessage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="595" column="38" selection-start-line="595" selection-start-column="33" selection-end-line="595" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="33" />
         </state>
       </provider>
     </entry>
