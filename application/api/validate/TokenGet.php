@@ -10,12 +10,12 @@ namespace app\api\validate;
 class TokenGet extends BaseValidate
 {
     protected $rule = [
-        'code' => 'require|isNotEmpty',
-        'name' => 'require|isNotEmpty'
+        'code' => 'require|isNotEmpty'
+//        'name' => 'require|isNotEmpty'
     ];
     
     protected $message=[
-        'code' => '请用code换取令牌！',
-        'name' => '名字为空'
+        'code' => '请用code换取令牌！'
+//        'name' => '名字为空'
     ];
 }
