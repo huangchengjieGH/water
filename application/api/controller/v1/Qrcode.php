@@ -16,7 +16,13 @@ class Qrcode extends BaseController
         $msg = $QrcodeService->qrcode($data->user_id);
         return $msg;
     }
-
+    public function generateQrcode(){
+        //获取用户信息
+        $data = $this->getUid();
+        $QrcodeService = new QrcodeService();
+        $msg = $QrcodeService->generateQrcode($data->user_id);
+        return $msg;
+    }
     public function buildRelation(){
         //获取用户信息
         $data = $this->getUid();
