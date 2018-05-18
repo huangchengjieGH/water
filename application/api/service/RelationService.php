@@ -8,7 +8,7 @@ class RelationService{
     {
 
 
-        return "系统正在维护，请稍厚再注册，谢谢！"
+        return "系统正在维护，请稍厚再注册，谢谢!";
         $count = Relation::CheckRelation($userId);
         $relation = Relation::findUserRelation($userId);
 
