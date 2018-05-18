@@ -6,7 +6,7 @@ use think\Db;
 class RelationService{
     public function buildRelation($userId,$originId)
     {
-        
+
         $count = Relation::CheckRelation($userId);
         $relation = Relation::findUserRelation($userId);
 

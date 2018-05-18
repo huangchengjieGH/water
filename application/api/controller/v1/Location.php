@@ -22,7 +22,7 @@ class Location extends BaseController
     }
 
     public function getDistrict(){
-        $data = $this->getUid();
+//        $data = $this->getUid();
         $DistrictService = new DistrictService();
         $msg = $DistrictService->getDistrict();
         return $msg;
