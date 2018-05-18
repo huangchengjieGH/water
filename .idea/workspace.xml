@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8de7354a-6274-438b-8929-93f4d7cb4f3b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/application/api/controller/v1/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/controller/v1/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/api/validate/OrderNew.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/validate/OrderNew.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,8 +55,8 @@
       <file leaf-file-name="Order.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="126" column="13" selection-start-line="126" selection-start-column="8" selection-end-line="126" selection-end-column="13" />
+            <state relative-caret-position="157">
+              <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
               <folding>
                 <element signature="e#156#194#0#PHP" expanded="true" />
               </folding>
@@ -102,8 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>formatBizQueryParaMapformatBizQueryParaMap</find>
-      <find>58</find>
       <find>https://fraud.mch.weixin.qq.com/risk/getpublickey</find>
       <find>\;\n    \}\n    private function rsa\(\$data\)\{\n\n    \}\n\n    \/\/统一提现接口\n    private function unifiedorder\(\) \{\n        \$url \= \'https\:\/\/api\.mch\.weixin\.qq\.com\/pay\/unifiedorder\'\;\n        \$parameters \= array\(\n            \'appid\' \=\&gt; \$this\-\&gt;appid\, \/\/小程序ID\n            \'mch_id\' \=\&gt; \$this\-\&gt;mch_id\, \/\/商户号\n            \'nonce_str\' \=\&gt; \$this\-\&gt;createNoncestr\(\)\, \/\/随机字符串\n\/\/            \'body\' \=\&gt; \'test\'\, \/\/商品</find>
       <find>encrypt</find>
@@ -132,6 +129,8 @@
       <find>getDistrict</find>
       <find>checkUserRole</find>
       <find>payServiceOrder</find>
+      <find>==null</find>
+      <find>null</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -324,12 +323,12 @@
       <option name="presentableId" value="Default" />
       <updated>1525781882811</updated>
       <workItem from="1525781885183" duration="16692000" />
-      <workItem from="1525859018411" duration="128767000" />
+      <workItem from="1525859018411" duration="129026000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145459000" />
+    <option name="totallyTimeSpent" value="145718000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="26" width="1502" height="948" extended-state="0" />
@@ -729,8 +728,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="126" column="13" selection-start-line="126" selection-start-column="8" selection-end-line="126" selection-end-column="13" />
+        <state relative-caret-position="157">
+          <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
           <folding>
             <element signature="e#156#194#0#PHP" expanded="true" />
           </folding>
