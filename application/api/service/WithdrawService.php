@@ -10,6 +10,7 @@ class WithdrawService{
     protected $rsa_public_key = '/webdata/photo/rsa_public_key.pem';//公钥路径
     public function withdraw($user_id,$bankNo,$trueName ,$code,$money)
     {
+            return show(201, '系统升级中，请稍侯');
             $url = 'https://api.mch.weixin.qq.com/mmpaysptrans/pay_bank';
             $key = config('paySet.key');
             $parameters = array(
@@ -19,7 +20,6 @@ class WithdrawService{
                 'bank_code' => $code,
                 'enc_bank_no' => $this->getpublickey($bankNo),
                 'enc_true_name' => $this->getpublickey($trueName),
-//            'desc' => new String("abc".getBytes("UTF-8")),
                 'partner_trade_no' => $this->createNoncestr(),
             );
             $parameters['sign'] = $this->getSign($parameters, $key);
