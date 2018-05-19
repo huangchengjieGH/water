@@ -11,36 +11,35 @@ class WithdrawService{
     public function withdraw($user_id,$bankNo,$trueName ,$code,$money)
     {
             return show(201, '系统升级中，请稍侯');
-            $url = 'https://api.mch.weixin.qq.com/mmpaysptrans/pay_bank';
-            $key = config('paySet.key');
-            $parameters = array(
-                'mch_id' => config('paySet.mch_id'),
-                'amount' => $money * 100,
-                'nonce_str' => $this->createNoncestr(),
-                'bank_code' => $code,
-                'enc_bank_no' => $this->getpublickey($bankNo),
-                'enc_true_name' => $this->getpublickey($trueName),
-                'partner_trade_no' => $this->createNoncestr(),
-            );
-            $parameters['sign'] = $this->getSign($parameters, $key);
-
-//            return $parameters;
-            $xmlData = $this->arrayToXml($parameters);
-            $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
-
-            if ($return['result_code'] == 'SUCCESS') {
-                $count = Income::changeUserIncomeStatus($user_id);
-                if($count > 0){
-                    return show(200, $return['err_code_des'], $return);
-                }else{
-                    return show(201, '数据更新失败', $return);
-                }
-
-            } else if ($return['result_code'] == 'FAIL') {
-                return show(201, $return['err_code_des'], $return);
-            } else {
-                return $return;
-            }
+//            $url = 'https://api.mch.weixin.qq.com/mmpaysptrans/pay_bank';
+//            $key = config('paySet.key');
+//            $parameters = array(
+//                'mch_id' => config('paySet.mch_id'),
+//                'amount' => $money * 100,
+//                'nonce_str' => $this->createNoncestr(),
+//                'bank_code' => $code,
+//                'enc_bank_no' => $this->getpublickey($bankNo),
+//                'enc_true_name' => $this->getpublickey($trueName),
+//                'partner_trade_no' => $this->createNoncestr(),
+//            );
+//            $parameters['sign'] = $this->getSign($parameters, $key);
+//
+//            $xmlData = $this->arrayToXml($parameters);
+//            $return = $this->xmlToArray($this->postXmlSSLCurl($xmlData, $url, 60));
+//
+//            if ($return['result_code'] == 'SUCCESS') {
+//                $count = Income::changeUserIncomeStatus($user_id);
+//                if($count > 0){
+//                    return show(200, $return['err_code_des'], $return);
+//                }else{
+//                    return show(201, '数据更新失败', $return);
+//                }
+//
+//            } else if ($return['result_code'] == 'FAIL') {
+//                return show(201, $return['err_code_des'], $return);
+//            } else {
+//                return $return;
+//            }
 
     }
 
